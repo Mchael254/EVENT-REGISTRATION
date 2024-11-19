@@ -1,0 +1,53 @@
+<div class="main">
+    <div class="formContainer" *ngIf="form">
+        <div class="form">
+            <form (ngSubmit)="payRace()">
+                <label for="Name">Name</label>
+                <input type="text" [(ngModel)]="userName" name="name" placeholder="Enter your Name">
+                <label for="Phone">Phone Number</label>
+                <input type="text" [(ngModel)]="phone" name="phone" placeholder="Enter your Mpesa Phone Number">
+                <label for="Category">Category</label>
+                <div class="customize">
+                    <select name="category" [(ngModel)]="category">
+                        <option value="Junior">5km:Junior</option>
+                        <option value="Ladies">10km:Ladies</option>
+                        <option value="Elites">21km:Elites</option>
+                        <option value="Veterans">42km:Veterans</option>
+                    </select>
+                </div>
+                <br><br>
+                <button type="submit" value="Submit" (click)="pay()">Confirm</button>
+                <p style="height: 10px; color: red;">{{error}}</p>
+            </form>
+
+        </div>
+
+
+    </div>
+    <div class="lipaContainer" *ngIf="payForm">
+        <p><strong>Name:</strong>{{userName}}</p>
+        <p><strong>Phone:</strong>{{phone}}</p>
+        <p><strong>Category:</strong>{{category}}</p>
+        <p><strong>Amount:</strong>Ksh:500</p>
+        <button type="submit" value="Submit" (click)="payMpesa()">Pay (Mpesa)</button>
+        <button (click)="editDetails()">Edit Details</button>
+
+    </div>
+    <div class="mpesa" *ngIf="mpesa">
+        <div class="icon">
+            <img src="../../assets/mpesa.png" alt="mpesa">
+
+        </div>
+        <div class="instructions">
+            <p>1: You will receive an stk push on your phone</p>
+            <p>2:Enter your mpesa pin</p>
+        
+        </div>
+        <div class="spinner">
+            <mat-spinner color="accent"></mat-spinner> 
+        </div>
+        
+       
+       
+    </div>
+</div>

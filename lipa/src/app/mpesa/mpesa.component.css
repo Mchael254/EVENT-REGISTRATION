@@ -1,0 +1,97 @@
+.main{
+    border: solid red 2px;
+    height: 99vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formContainer{
+    border: solid blue 2px;
+    width: 50%;
+    height: 70%;
+
+}
+.form{
+    border: solid grey 2px;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form form input{
+    width: 90%;
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.form button{
+    width: 70%;
+    background-color: #7af904;
+    border: solid 1px #81a5f1;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.customize{
+    min-width: 350px;
+}
+.customize select {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.675em 6em 0.675em 1em;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    color: #000;
+    cursor: pointer;
+  }
+
+.lipaContainer{
+    border: solid green 2px;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.lipaContainer button{
+    width: 70%;
+    background-color: #7af904;
+    border: solid 1px #81a5f1;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mpesa{
+    border: solid yellow 2px;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.mpesa img{
+    width: 40vh;
+    height: 20vh;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+}
+.spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-mdc-progress-spinner { --mdc-circular-progress-active-indicator-color: rgb(20, 153, 20); }

@@ -1,0 +1,27 @@
+.main{
+    border: solid red 2px;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.events{
+    border: solid green 2px;
+    height: 83vh;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #dddd;
+    overflow-y: auto;
+}
+.eventCard{
+    height: 30vh;
+    width: 30%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../../assets/race.jpg');
+    background-size: cover;
+    border-radius: 10px;
+}
