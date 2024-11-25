@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 export class LandingComponent {
   constructor(private router:Router){}
   pay() {
-    console.log('Payment successful');
     this.router.navigate(['/pay']);
   }
 

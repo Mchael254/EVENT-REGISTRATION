@@ -1,0 +1,144 @@
+<app-navigation></app-navigation>
+<section id="hero" style="background-image: url('../../assets/large.jpg');">
+    <div class="overlay">
+        <h1>Ride Beyond Limits</h1>
+        <p>Discover, connect, and gear up with fellow cyclists.</p>
+        <a href="#join" class="cta-btn">Join Now</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2>What We Do</h2>
+    <div class="about-content">
+        <div class="about-feature">
+            <div class="aboutImage">
+
+            </div>
+            <div class="aboutContent">
+                <p>We have a bike community</p>
+
+            </div>
+        </div>
+        <div class="about-feature">
+            <div class="aboutImage">
+
+            </div>
+            <div class="aboutContent">
+                <p>Read expert reviews on biking gear and accessories.</p>
+
+            </div>
+        </div>
+        <div class="about-feature">
+            <div class="aboutImage">
+
+            </div>
+            <div class="aboutContent">
+                <p>Explore curated biking trails and routes.</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Favorite Routes -->
+<section id="features">
+    <h2>Our Favorite Routes</h2>
+    <div class="teamRiders">
+        <!-- Left Arrow -->
+        <button class="arrow left-arrow" (click)="prevFeatures()"> &#8249; </button>
+
+        <!-- Features -->
+        <div class="features-grid">
+            <div class="feature" *ngFor="let feature of getDisplayedFeatures()">
+                <h3>{{ feature.title }}</h3>
+                <p>{{ feature.description }}</p>
+            </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="arrow right-arrow" (click)="nextFeatures()"> &#8250; </button>
+    </div>
+</section>
+
+<!-- What we do-->
+<section id="why">
+    <h2>Why Ride With Us?</h2>
+    <div class="whyContainer">
+        <div class="large">
+            <div class="largeImage">
+
+            </div>
+            <div class="largeContent">
+                <h3>Find the right cycling equipments</h3>
+            </div>
+
+        </div>
+        <div class="small">
+            <div class="whyCard">
+                <div class="whyImage">
+
+                </div>
+                <div class="whyContent">
+                    <h3>Connect with fellow cyclists</h3>
+                    <p>Join a community of cyclists who share your passion for biking.</p>
+                </div>
+            </div>
+            <div class="whyCard">
+                <div class="whyImage">
+
+                </div>
+                <div class="whyContent">
+                    <h3>Connect with fellow cyclists</h3>
+                    <p>Join a community of cyclists who share your passion for biking.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- The Team-->
+<section id="features">
+    <h2 style="text-align: left;">Meet the Team</h2>
+    <hr>
+    <div class="teamNotice">
+        <p style="font-size: large;">Meet our riders</p>
+        <div class="teamCategory">
+            <p>Teams</p>
+            <select name="teamCategory" id="teamCategory">
+                <option value="all">Men Team</option>
+                <option value="road">Women Team</option>
+                <option value="mountain">Development Team</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="teamRiders">
+        <!-- Left Arrow -->
+        <button class="arrow left-arrow" (click)="prevRoutes()"> &#8249; </button>
+
+        <!-- Features -->
+        <div class="features-grid">
+            <div class="feature" *ngFor="let route of getDisplayedRoutes()">
+                <h3>{{ route.title }}</h3>
+                <img src="{{ route.picture }}" alt="picture">
+            </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="arrow right-arrow" (click)="nextRoutes()"> &#8250; </button>
+    </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<app-footer></app-footer>

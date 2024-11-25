@@ -1,12 +1,13 @@
 <div class="main">
     <div class="formContainer" *ngIf="form">
         <div class="form">
-            <form (ngSubmit)="payRace()">
+            <P>Enter your details</P>
+            <form>
                 <label for="Name">Name</label>
                 <input type="text" [(ngModel)]="userName" name="name" placeholder="Enter your Name">
                 <label for="Phone">Phone Number</label>
                 <input type="text" [(ngModel)]="phone" name="phone" placeholder="Enter your Mpesa Phone Number">
-                <label for="Category">Category</label>
+                <label for="Category">Race Category</label>
                 <div class="customize">
                     <select name="category" [(ngModel)]="category">
                         <option value="Junior">5km:Junior</option>
@@ -16,7 +17,7 @@
                     </select>
                 </div>
                 <br><br>
-                <button type="submit" value="Submit" (click)="pay()">Confirm</button>
+                <button type="submit" value="Submit" (click)="initiatePay()">Confirm</button>
                 <p style="height: 10px; color: red;">{{error}}</p>
             </form>
 
@@ -25,10 +26,11 @@
 
     </div>
     <div class="lipaContainer" *ngIf="payForm">
+        <p>Kindly confirm your details</p>
         <p><strong>Name:</strong>{{userName}}</p>
         <p><strong>Phone:</strong>{{phone}}</p>
         <p><strong>Category:</strong>{{category}}</p>
-        <p><strong>Amount:</strong>Ksh:500</p>
+        <p><strong>Amount:</strong>{{amount}}</p>
         <button type="submit" value="Submit" (click)="payMpesa()">Pay (Mpesa)</button>
         <button (click)="editDetails()">Edit Details</button>
 
@@ -41,13 +43,19 @@
         <div class="instructions">
             <p>1: You will receive an stk push on your phone</p>
             <p>2:Enter your mpesa pin</p>
-        
+
         </div>
-        <div class="spinner">
-            <mat-spinner color="accent"></mat-spinner> 
+        <div class="spinner" *ngIf="mpesaSpinner">
+            <mat-spinner color="accent"></mat-spinner>
         </div>
-        
-       
-       
+        <div class="error" *ngIf="errorResponse">
+            <p>{{errorMessage}}</p>
+        </div>
+        <div class="success" *ngIf="successResponse">
+            <p>{{successMessage}}</p>
+            <p>You are registered successfully</p>
+        </div>
+
     </div>
+
 </div>

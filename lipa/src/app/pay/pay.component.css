@@ -1,12 +1,12 @@
 .main{
-    border: solid red 2px;
+    /* border: solid red 2px; */
     height: 99vh;
     display: flex;
     justify-content: center;
 }
 
 .pay{
-    border: solid green 2px;
+    /* border: solid rgb(126, 128, 0) 2px; */
     height: 98vh;
     width: 60%;
     display: flex;
@@ -15,7 +15,7 @@
     align-items: center;
 
 }
-.pay img{
+.brief img{
     height: 300px;
     width: 300px;
     margin: 1%;
@@ -23,7 +23,8 @@
    
 }
 .brief{
-    border: solid blue 2px;
+    /* border: solid blue 2px; */
+    border: solid grey 1px;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -31,12 +32,20 @@
     align-items: flex-end;
     height: 80%;
     padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); 
+    border-radius: 5px;
+    
 }
 .details{
-    border: solid green 2px;
+    border: solid grey 1px;
     width: 40%;
-    height: 80%;
-    padding: 10px;
+    height: 83.4%;
+    text-align: center;
+    border-left: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); 
+    border-radius: 5px;
 }
 .details button{
     width: 100%;
@@ -48,3 +57,89 @@
     font-size: 20px;
     cursor: pointer;
 }
+
+/* media screen */
+@media screen and (max-width: 480px) {
+    .pay{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .brief{
+        width: 100%;
+        height: 40%;
+        align-items: center;
+
+
+    }
+    .brief img{
+        background-size: contain;
+    }
+    .details{
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    
+
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .pay{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .brief{
+        width: 100%;
+        height: 40%;
+        align-items: center;
+
+
+    }
+    .brief img{
+        background-size: contain;
+    }
+    .details{
+        width: 100%;
+        height: 40%;
+    }
+
+   
+}
+
+@media  screen and (min-width: 768px) and (max-width: 1024px) {
+    .pay{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .brief{
+        width: 100%;
+        height: 40%;
+        align-items: center;
+
+
+    }
+    .brief img{
+        background-size: contain;
+    }
+    .details{
+        width: 100%;
+        height: 40%;
+    }
+
+   
+    
+}
+

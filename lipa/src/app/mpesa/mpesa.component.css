@@ -1,49 +1,17 @@
-.main{
-    border: solid red 2px;
+.main {
+    /* border: solid red 2px; */
     height: 99vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 99vw;
 }
-.formContainer{
-    border: solid blue 2px;
-    width: 50%;
-    height: 70%;
 
-}
-.form{
-    border: solid grey 2px;
-    height: 65vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.form form input{
-    width: 90%;
-    padding: 10px;
-    margin: 15px 0;
-    display: flex;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-.form button{
-    width: 70%;
-    background-color: #7af904;
-    border: solid 1px #81a5f1;
-    color: black;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.customize{
-    min-width: 350px;
-}
+
+
 .customize select {
-    width: 90%;
+    width: 3rem;
     font-size: 1rem;
     padding: 0.675em 6em 0.675em 1em;
     background-color: #fff;
@@ -51,18 +19,91 @@
     border-radius: 0.25rem;
     color: #000;
     cursor: pointer;
-  }
+}
 
-.lipaContainer{
-    border: solid green 2px;
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e4dede; 
+    height: 100vh; 
+    width: 100%;
+}
+
+.form {
+    width: 85%; 
+    max-width: 400px; 
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    text-align: center; 
+}
+
+.form p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333333; 
+    margin-bottom: 20px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.form label {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #555555; 
+    text-align: left;
+}
+
+.form input, 
+.form select {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #cccccc; 
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+
+.form button {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #007bff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+.form p[style] {
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: red;
+}
+
+.lipaContainer {
+    border: solid grey 1px;
     width: 30%;
-    height: 50%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); 
 
 }
-.lipaContainer button{
+
+.lipaContainer button {
     width: 70%;
     background-color: #7af904;
     border: solid 1px #81a5f1;
@@ -73,25 +114,78 @@
     cursor: pointer;
 }
 
-.mpesa{
-    border: solid yellow 2px;
-    width: 30%;
-    height: 50%;
+.mpesa {
+    border: solid grey 1px;
+    width: 40%;
+    height: 60%;
     display: flex;
     flex-direction: column;
 }
-.mpesa img{
-    width: 40vh;
+
+.mpesa img {
+    width: 100%;
     height: 20vh;
 }
-.icon{
+
+.icon {
     display: flex;
     justify-content: center;
 }
-.spinner{
+
+.spinner {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.mat-mdc-progress-spinner { --mdc-circular-progress-active-indicator-color: rgb(20, 153, 20); }
+.mat-mdc-progress-spinner {
+    --mdc-circular-progress-active-indicator-color: rgb(20, 153, 20);
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+.success {
+    color: blue;
+    text-align: center;
+}
+
+/* media screen */
+@media screen and (max-width: 480px) {
+    .main{
+        width: 100%;
+        height: 100vh;
+    }
+    .formContainer{
+        width: 100%;
+    }
+    .form {
+        padding: 15px; 
+        width: 85%;
+    }
+
+    .form p {
+        font-size: 1em;
+    }
+
+    .form input, 
+    .form select, 
+    .form button {
+        font-size: 0.7em;
+        width: 80%;
+    }
+
+    .lipaContainer {
+        width: 80%;
+        height: 60%;
+    }
+    .mpesa {
+        width: 80%;
+        height: 50%;
+    }
+
+
+}
+

@@ -14,6 +14,13 @@ import { PayComponent } from './pay/pay.component';
 import { MpesaComponent } from './mpesa/mpesa.component';
 import { FormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { WebhookComponent } from './webhook/webhook.component';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -21,7 +28,13 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     LandingComponent,
     EventComponent,
     PayComponent,
-    MpesaComponent
+    MpesaComponent,
+    WebhookComponent,
+    SigninComponent,
+    SignupComponent,
+    NavigationComponent,
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +43,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     HttpClientModule,
     MatSlideToggleModule,
     FormsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
