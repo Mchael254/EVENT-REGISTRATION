@@ -12,7 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'/landing',pathMatch:'full'},
+  {path:'',redirectTo:'/home',pathMatch:'full'},
   { path:'landing',component: LandingComponent},
   {path:'event',component:EventComponent},
   {path:'pay',component:PayComponent},

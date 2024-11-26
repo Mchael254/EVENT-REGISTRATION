@@ -3,13 +3,26 @@
         <img src="/assets/ariders.jpg">
     </div>
     <div class="right">
-        <a routerLink="/landing">Home</a>
+        <a routerLink="/home">Home</a>
         <a routerLink="/riders">Riders</a>
         <a routerLink="/riders">Events</a>
         <a routerLink="/signin">Login</a>
         <a routerLink="/signin">Contact</a>
         <a routerLink="/signin">Board</a>
     </div>
+    <div class="options" *ngIf="options">
+        <button (click)="toggleDrawer()">
+            <fa-icon [icon]="faBars"></fa-icon>
+        </button>
+    </div>
 
-    <a routerLink="/signin">Support</a>
+    <a class="support" routerLink="/signin">Support</a>
+    
+    
+    <div class="drawer" [class.open]="isDrawerOpen">
+        <!-- Add your drawer content here -->
+        <div class="drawer-content">
+            <p>Drawer Content</p>
+        </div>
+    </div>
 </div>
