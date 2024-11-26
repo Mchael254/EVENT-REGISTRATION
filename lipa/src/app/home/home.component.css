@@ -1,7 +1,4 @@
-:root{
-    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    --border-radius: 10px;
-}
+
 /* Hero Section */
 #hero {
     position: relative;
@@ -44,12 +41,6 @@
 }
 
 /* route */
-.routes{
-    height: 80vh;
-    justify-content: center;
-    align-items: center;
-    
-}
 .routeContainer, .reasonsContainer, .ridersContainer{
     height: 85%;
     width: 100%;
@@ -90,7 +81,7 @@
 }
 
 /* reasons */
-.reasons, .riders{
+.reasons, .riders, .routes{
     height: 80vh;
 
 }
@@ -131,7 +122,6 @@ hr{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: var(--box-shadow);
     border-radius: 10px;
     background-color: rgb(46, 45, 45);
     color: white;
