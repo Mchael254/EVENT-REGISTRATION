@@ -21,6 +21,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatSlideToggleModule,
     FormsModule,
     MatProgressSpinnerModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

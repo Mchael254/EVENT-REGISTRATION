@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+
+
 
 @Component({
   selector: 'app-navigation',
@@ -8,12 +10,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavigationComponent {
   faBars = faBars; 
+  faBack = faChevronLeft;
   isDrawerOpen = false; 
-  options:boolean = true;
 
   toggleDrawer() {
     this.isDrawerOpen = !this.isDrawerOpen;
-    this.options = false
   }
 
 }
