@@ -154,27 +154,28 @@ export class HomeComponent implements OnInit {
   // products
   products = [
     {
-      title: 'Bibshort',
       picture: '../../assets/bibshort.webp',
       description: 'Cycling bibshorts with a comfortable fit and high-quality materials.',
+      price: 'Ksh 1500',
 
     },
     {
-      title: 'Hoods',
       picture: '../../assets/hood.webp',
-      description: 'Cycling hoods with a comfortable fit and high-quality materials.'
+      description: 'Cycling hoods with a comfortable fit and high-quality materials.',
+      price: 'Ksh 1500',
     },
     {
-      title: 'Cycling Jersey',
       picture: '../../assets/shirt.webp',
-      description: 'Cycling jersey with a comfortable fit and high-quality materials.'
+      description: 'Cycling jersey with a comfortable fit and high-quality materials.',
+      price: 'Ksh 1500',
     },
     {
-      title: 'Member Support',
       picture: '../../assets/community.jpg',
-      description: 'Get advice, tips, and guides from experienced cyclists.'
+      description: 'Get advice, tips, and guides from experienced cyclists.',
+      price: 'Ksh 1500',
     }
   ];
+
 
   maxProducts = 3;
 
@@ -184,7 +185,7 @@ export class HomeComponent implements OnInit {
 
     return end > start
       ? this.products.slice(start, end)
-      : [...this.features.slice(start), ...this.products.slice(0, end)];
+      : [...this.products.slice(start), ...this.products.slice(0, end)];
   }
 
 

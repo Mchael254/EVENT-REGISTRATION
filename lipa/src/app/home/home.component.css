@@ -233,6 +233,57 @@ hr {
 
 }
 
+/* schedule and results */
+.schedule{
+    height: auto;
+    background-color: black;
+    color: #fff;
+    padding-bottom: 20px;
+}
+.scheduleContainer{
+    height: auto;
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+    color: gold;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+.calendar,.results, .wins{
+    width: 32%;
+}
+.unit{
+    height: 15%;
+    width: 98%;
+    background-color: rgb(46, 44, 44);
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    padding: 7px;
+    color: #fff;
+    line-height: 5px;
+}
+.date{
+    margin-right: 2rem;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background:gold;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
 
 
 
@@ -311,8 +362,22 @@ hr {
         margin: 10px;
     }
     .more{
-        width: 20%;
+        width: 30%;
+        margin-bottom: 15px;
 
+    }
+
+    .schedule{
+        height: auto;
+    }
+
+    .scheduleContainer{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .calendar,.results,.wins{
+        width: 95%;
     }
  
 
@@ -328,6 +393,21 @@ hr {
         width: 100%;
 
     }
+
+    .schedule{
+        height: auto;
+    }
+
+    .scheduleContainer{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .calendar,.results,.wins{
+        width: 95%;
+    }
+ 
+    
 }
 
 @media screen and (max-width: 1024px) {
@@ -337,5 +417,19 @@ hr {
         height: 100%;
         width: 100%;
     }
+
+    .schedule{
+        height: auto;
+    }
+
+    .scheduleContainer{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .calendar,.results,.wins{
+        width: 95%;
+    }
+ 
 
 }
