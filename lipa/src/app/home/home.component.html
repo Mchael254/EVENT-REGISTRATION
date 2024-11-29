@@ -32,7 +32,7 @@
                     <p>Connect with fellow cyclists, share your experiences, and discover new routes.</p>
                 </div>
             </div>
-            
+
         </div>
 
     </div>
@@ -73,6 +73,28 @@
             </div>
             <button class="arrow right-arrow" (click)="nextRoutes()"> &#8250; </button>
         </div>
+    </div>
+
+    <!-- Our Products -->
+    <div class="products">
+        <h2>Featured Products</h2>
+        <div class="productsContainer">
+            <div class="productCard" *ngFor="let product of getDisplayedProducts()">
+        
+                    <img src={{product.picture}} alt="product1">
+                
+                <div class="productDescription">
+                    <p>{{product.title}}</p>
+                    <p>{{product.description}}</p>
+                </div>
+               
+            </div>
+            <div class="more">
+                <h2>More</h2>
+            </div>
+
+        </div>
+
     </div>
 
     <!-- Footer -->

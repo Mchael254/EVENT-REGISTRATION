@@ -151,4 +151,42 @@ export class HomeComponent implements OnInit {
   }
 
 
+  // products
+  products = [
+    {
+      title: 'Bibshort',
+      picture: '../../assets/bibshort.webp',
+      description: 'Cycling bibshorts with a comfortable fit and high-quality materials.',
+
+    },
+    {
+      title: 'Hoods',
+      picture: '../../assets/hood.webp',
+      description: 'Cycling hoods with a comfortable fit and high-quality materials.'
+    },
+    {
+      title: 'Cycling Jersey',
+      picture: '../../assets/shirt.webp',
+      description: 'Cycling jersey with a comfortable fit and high-quality materials.'
+    },
+    {
+      title: 'Member Support',
+      picture: '../../assets/community.jpg',
+      description: 'Get advice, tips, and guides from experienced cyclists.'
+    }
+  ];
+
+  maxProducts = 3;
+
+  getDisplayedProducts() {
+    const start = this.currentIndex;
+    const end = (start + this.maxProducts) % this.products.length;
+
+    return end > start
+      ? this.products.slice(start, end)
+      : [...this.features.slice(start), ...this.products.slice(0, end)];
+  }
+
+
+
 }
