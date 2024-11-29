@@ -8,6 +8,36 @@
         </div>
     </div>
 
+
+    <!-- reasons -->
+    <div class="reasons">
+        <h2>Why ride with us</h2>
+        <div class="reasonsContainer">
+            <div class="large">
+                <p>Community</p>
+                <img src="../../assets/community.jpg" alt="community">
+                <p>Connect with fellow cyclists, share your experiences, and discover new routes.</p>
+            </div>
+            <div class="small">
+                <div class="smallCard">
+                    <p>Community</p>
+                    <p>Connect with fellow cyclists, share your experiences, and discover new routes.</p>
+                </div>
+                <div class="smallCard">
+                    <p>Community</p>
+                    <p>Connect with fellow cyclists, share your experiences, and discover new routes.</p>
+                </div>
+                <div class="smallCard">
+                    <p>Community</p>
+                    <p>Connect with fellow cyclists, share your experiences, and discover new routes.</p>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+
     <!-- Our favorite routes -->
     <div class="routes">
         <h2>Our Favorite Routes</h2>
@@ -22,43 +52,19 @@
         </div>
     </div>
 
-    <!-- reasons -->
-    <!-- <div class="reasons">
-        <h2>Why ride with us</h2>
-        <div class="reasonsContainer">
-            <div class="large">
-                <p>Community</p>
-                <img src="../../assets/community.jpg" alt="community">
-                <p>Connect with fellow cyclists, share your experiences, and discover new routes.</p>
-            </div>
-            <div class="small">
-
-                <div class="smallCard">
-                    <p>Community</p>
-                    <p>Connect with fellow cyclists, share your experiences, and discover new routes.</p>
-                </div>
-                <div class="smallCard">
-                    <p>Community</p>
-                    <p>Connect with fellow cyclists, share your experiences, and discover new routes.</p>
-                </div>
-                <div class="smallCard">
-                    <p>Community</p>
-                    <p>Connect with fellow cyclists, share your experiences, and discover new routes.</p>
-                </div>
-                <div class="smallCard">
-                    <p>Community</p>
-                    <p>Connect with fellow cyclists, share your experiences, and discover new routes.</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div> -->
-
     <!-- Riders -->
-    <!-- <div class="riders">
+    <div class="riders">
         <h2>Meet the Riders</h2>
         <hr>
+        <div class="riderCategory">
+            <p>Meet our riders</p>
+            <select class="select">
+                <option value="all" selected>All</option>
+                <option value="men">Men</option>
+                <option value="women">Women</option>
+                <option value="junior">Junior</option>
+            </select>
+        </div>
         <div class="ridersContainer">
             <button class="arrow left-arrow" (click)="prevRoutes()"> &#8249; </button>
             <div class="riderCard" *ngFor="let route of getDisplayedRoutes()">
@@ -67,8 +73,8 @@
             </div>
             <button class="arrow right-arrow" (click)="nextRoutes()"> &#8250; </button>
         </div>
-     </div> -->
+    </div>
 
     <!-- Footer -->
-    <!-- <app-footer></app-footer> -->
+    <app-footer></app-footer>
 </div>

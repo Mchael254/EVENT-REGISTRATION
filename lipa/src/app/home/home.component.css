@@ -72,6 +72,10 @@
     background-size: cover;
 }
 
+.riderCard img {
+    height: 85%;
+}
+
 .arrow {
     color: black;
     border: none;
@@ -93,21 +97,33 @@
     height: 80vh;
 
 }
+.reasonsContainer{
+    display: flex;
+    width: 98%;
+}
+.reasons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .large {
-    height: 90%;
+    height: 97%;
     width: 35%;
     background-color: white;
+    border-radius: 5px;
 }
 
 .small {
     background-color: white;
-    height: 90%;
+    height: 85%;
     width: 55%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    border-radius: 5px;
 }
 
 .smallCard {
@@ -127,7 +143,7 @@ hr {
 /* riders */
 .riderCard {
     height: 90%;
-    width: 20%;
+    width: 24%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,6 +152,31 @@ hr {
     background-color: rgb(46, 45, 45);
     color: white;
 }
+.riderCategory{
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+    padding: auto;
+    margin-bottom: 0.5rem;
+}
+.select {
+    width: 15%;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    color: #000;
+    cursor: pointer; 
+    text-align: center;
+}
+.select:focus{
+    outline: 2px solid gold; 
+}
+
+.categories {
+    float: right;
+    width: 15%;
+    margin-bottom: 0.5rem;
+}
+
 
 
 
@@ -148,7 +189,7 @@ hr {
     }
 
     .routeCard {
-        width: 65%;
+        width: 70%;
     }
 
     #hero {
@@ -156,6 +197,51 @@ hr {
         background-repeat: no-repeat;
         height: 100%;
     }
+    .select{
+        width: 25%;
+    }
+
+    .arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .riderCard {
+        width: 70%;
+    }
+    .reasons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 98%;
+    }
+    .reasonsContainer{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        width: 93%;
+        
+    }
+    .large{
+        margin: 5px;
+        width: 98%;
+        height: auto;
+    }
+    .small{
+        margin: 10px;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .smallCard{
+        width: 90%;
+        margin:5px ;
+        text-align: center;
+    }
+ 
 
 
 }
@@ -167,16 +253,16 @@ hr {
         background-repeat: no-repeat;
         height: 100%;
         width: 100%;
-     
+
     }
 }
 
 @media screen and (max-width: 1024px) {
-   #hero {
+    #hero {
         background-size: contain;
         background-repeat: no-repeat;
         height: 100%;
         width: 100%;
     }
-    
+
 }
