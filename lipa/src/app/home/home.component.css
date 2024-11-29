@@ -98,11 +98,13 @@
     height: 80vh;
 
 }
-.reasonsContainer{
+
+.reasonsContainer {
     display: flex;
     width: 98%;
 }
-.reasons{
+
+.reasons {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -153,23 +155,26 @@ hr {
     background-color: rgb(46, 45, 45);
     color: white;
 }
-.riderCategory{
+
+.riderCategory {
     width: 98%;
     display: flex;
     justify-content: space-around;
     padding: auto;
     margin-bottom: 0.5rem;
 }
+
 .select {
     width: 15%;
     border: 1px solid #caced1;
     border-radius: 0.25rem;
     color: #000;
-    cursor: pointer; 
+    cursor: pointer;
     text-align: center;
 }
-.select:focus{
-    outline: 2px solid gold; 
+
+.select:focus {
+    outline: 2px solid gold;
 }
 
 .categories {
@@ -187,6 +192,7 @@ hr {
     align-items: center;
     justify-content: center;
 }
+
 .productsContainer {
     width: 95%;
     height: 80%;
@@ -196,7 +202,8 @@ hr {
     justify-content: space-around;
     background-color: black;
 }
-.productCard{
+
+.productCard {
     width: 23%;
     height: 90%;
     display: flex;
@@ -206,18 +213,21 @@ hr {
     border-radius: 10px;
     background-color: white;
 }
-.products img{
+
+.products img {
     width: 100%;
     height: 66%;
     border-radius: 5px;
     background-size: cover;
 }
-.productDescription{
+
+.productDescription {
     background-color: black;
     color: white;
     height: 34%;
 }
-.more{
+
+.more {
     height: 50%;
     width: 20%;
     border-radius: 5px;
@@ -228,19 +238,22 @@ hr {
     transition: ease-in-out 0.3s;
     cursor: pointer;
 }
-.more:hover{
-    background-color:#fff;
+
+.more:hover {
+    background-color: #fff;
 
 }
 
 /* schedule and results */
-.schedule{
+.schedule {
     height: auto;
     background-color: black;
     color: #fff;
     padding-bottom: 20px;
+    padding-top: 10px;
 }
-.scheduleContainer{
+
+.scheduleContainer {
     height: auto;
     width: 98%;
     display: flex;
@@ -249,10 +262,14 @@ hr {
     overflow-y: auto;
     padding-bottom: 10px;
 }
-.calendar,.results, .wins{
+
+.calendar,
+.results,
+.wins {
     width: 32%;
 }
-.unit{
+
+.unit {
     height: 15%;
     width: 98%;
     background-color: rgb(46, 44, 44);
@@ -263,26 +280,56 @@ hr {
     color: #fff;
     line-height: 5px;
 }
-.date{
+
+.date {
     margin-right: 2rem;
 }
 
 /*scrollbar*/
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
     background: #f1f1f1;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background:gold;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb {
+    background: gold;
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+}
+
+.overview{
+    height: 70vh;
+    margin-bottom: 2.4rem;
+    padding-top: 10px;
+    
+}
+.overviewContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: white;
+    margin-top: 2rem;
+    height: 90%;
+
+}
+.overViewCard{
+    border-left: solid grey 1px;
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 5px;
+    color: #fff;
+}
 
 
 
@@ -304,7 +351,8 @@ hr {
         background-repeat: no-repeat;
         height: 100%;
     }
-    .select{
+
+    .select {
         width: 25%;
     }
 
@@ -316,7 +364,8 @@ hr {
     .riderCard {
         width: 70%;
     }
-    .reasons{
+
+    .reasons {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -324,62 +373,82 @@ hr {
         height: auto;
         width: 98%;
     }
-    .reasonsContainer{
+
+    .reasonsContainer {
         display: flex;
         flex-direction: column;
         padding: 10px;
         width: 93%;
-        
+
     }
-    .large{
+
+    .large {
         margin: 5px;
         width: 98%;
         height: auto;
     }
-    .small{
+
+    .small {
         margin: 10px;
         width: 95%;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
     }
-    .smallCard{
+
+    .smallCard {
         width: 90%;
-        margin:5px ;
+        margin: 5px;
         text-align: center;
     }
-    .products{
+
+    .products {
         height: auto;
     }
-    .productsContainer{
+
+    .productsContainer {
         border-radius: 5px;
         display: flex;
         flex-direction: column;
         height: auto;
     }
-    .productCard{
+
+    .productCard {
         width: 85%;
         margin: 10px;
     }
-    .more{
+
+    .more {
         width: 30%;
         margin-bottom: 15px;
 
     }
 
-    .schedule{
+    .schedule {
         height: auto;
+        padding: 10px;
     }
 
-    .scheduleContainer{
+    .scheduleContainer {
         display: flex;
         flex-direction: column;
         height: auto;
     }
-    .calendar,.results,.wins{
+
+    .calendar,
+    .results,
+    .wins {
         width: 95%;
     }
- 
+
+    .overViewCard{
+        width: 15%;
+        line-height: 30px;
+    }
+    .overViewCard h1{
+        font-size: 1.5rem;
+    }
+
 
 
 }
@@ -394,20 +463,24 @@ hr {
 
     }
 
-    .schedule{
+    .schedule {
         height: auto;
+        padding: 10px;
     }
 
-    .scheduleContainer{
+    .scheduleContainer {
         display: flex;
         flex-direction: column;
         height: auto;
     }
-    .calendar,.results,.wins{
+
+    .calendar,
+    .results,
+    .wins {
         width: 95%;
     }
- 
-    
+
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -418,18 +491,22 @@ hr {
         width: 100%;
     }
 
-    .schedule{
+    .schedule {
         height: auto;
+        padding: 10px;
     }
 
-    .scheduleContainer{
+    .scheduleContainer {
         display: flex;
         flex-direction: column;
         height: auto;
     }
-    .calendar,.results,.wins{
+
+    .calendar,
+    .results,
+    .wins {
         width: 95%;
     }
- 
+
 
 }
