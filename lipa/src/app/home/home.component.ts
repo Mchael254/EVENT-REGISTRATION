@@ -53,12 +53,15 @@ export class HomeComponent implements OnInit {
     if (width >= 1200) {
       this.maxFeatures = 3;
       this.maxRoutes = 3;
+      this.maxRiders = 3;
     } else if (width >= 768 && width < 1200) {
       this.maxFeatures = 2;
       this.maxRoutes = 2;
+      this.maxRiders = 2;
     } else {
       this.maxFeatures = 1;
       this.maxRoutes = 1;
+      this.maxRiders = 1;
     }
   }
 
@@ -66,15 +69,19 @@ export class HomeComponent implements OnInit {
     if (this.breakpointObserver.isMatched(Breakpoints.Large)) {
       this.maxFeatures = 3;
       this.maxRoutes = 3;
+      this.maxRiders = 3;
     } else if (this.breakpointObserver.isMatched(Breakpoints.Medium)) {
       this.maxFeatures = 2;
       this.maxRoutes = 2;
+      this.maxRiders = 2;
     } else if (this.breakpointObserver.isMatched(Breakpoints.Small)) {
       this.maxFeatures = 1;
       this.maxRoutes = 1;
+      this.maxRiders = 1;
     } else if (this.breakpointObserver.isMatched('(min-width: 500px)')) {
       this.maxFeatures = 1;
       this.maxRoutes = 1;
+      this.maxRiders = 1;
     }
   }
 
@@ -188,6 +195,48 @@ export class HomeComponent implements OnInit {
       : [...this.products.slice(start), ...this.products.slice(0, end)];
   }
 
+  //riders'
+  riders = [
+    {
+      picture: '../../assets/Jonas.png',
+      name: 'Jonas Vingegard',
+
+    },
+    {
+      picture: '../../assets/Wout.png',
+      name: 'Wout Van Aert',
+    },
+    {
+      picture: '../../assets/benoot.png',
+      name: 'Benoot',
+    },
+    {
+      picture: '../../assets/matteo.png',
+      name: 'Matteo Jogenson',
+    }
+  ];
+
+  maxRiders = 3;
+  currentRider = 0;
+
+
+  getDisplayedRiders() {
+    const start = this.currentRider;
+    const end = (start + this.maxRiders) % this.riders.length;
+
+    return end > start
+      ? this.riders.slice(start, end)
+      : [...this.riders.slice(start), ...this.riders.slice(0, end)];
+  }
+
+  prevRider() {
+    this.currentRider = (this.currentRider - 1 + this.riders.length) % this.riders.length;
+  }
+
+
+  nextRider() {
+    this.currentRider =(this.currentRider + 1) % this.riders.length;
+  }
 
 
 }

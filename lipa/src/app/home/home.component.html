@@ -2,7 +2,7 @@
     <!-- <app-navigation></app-navigation> -->
     <div id="hero" style="background-image: url('../../assets/large.jpg');">
         <div class="overlay">
-            <h1>Ride Beyond Limits</h1>
+            <h1>Adventure Awaits</h1>
             <p>Discover, connect, and gear up with fellow cyclists.</p>
             <a href="#join" class="cta-btn">Join Now</a>
         </div>
@@ -52,28 +52,7 @@
         </div>
     </div>
 
-    <!-- Riders -->
-    <div class="riders">
-        <h2>Meet the Riders</h2>
-        <hr>
-        <div class="riderCategory">
-            <p>Meet our riders</p>
-            <select class="select">
-                <option value="all" selected>All</option>
-                <option value="men">Men</option>
-                <option value="women">Women</option>
-                <option value="junior">Junior</option>
-            </select>
-        </div>
-        <div class="ridersContainer">
-            <button class="arrow left-arrow" (click)="prevRoutes()"> &#8249; </button>
-            <div class="riderCard" *ngFor="let route of getDisplayedRoutes()">
-                <p>{{route.title}}</p>
-                <img src={{route.picture}} alt="rider1">
-            </div>
-            <button class="arrow right-arrow" (click)="nextRoutes()"> &#8250; </button>
-        </div>
-    </div>
+    
 
     <!-- Our Products -->
     <div class="products">
@@ -95,6 +74,29 @@
 
         </div>
 
+    </div>
+
+    <!-- Riders -->
+    <div class="riders">
+        <h2>Meet the Riders</h2>
+        <hr>
+        <div class="riderCategory">
+            <h2>Meet our riders</h2>
+            <select class="select">
+                <option value="all" selected>All</option>
+                <option value="men">Men</option>
+                <option value="women">Women</option>
+                <option value="junior">Junior</option>
+            </select>
+        </div>
+        <div class="ridersContainer">
+            <button class="arrow left-arrow" (click)="prevRider()"> &#8249; </button>
+            <div class="riderCard" *ngFor="let rider of getDisplayedRiders()">
+                <p>{{rider.name}}</p>
+                <img src={{rider.picture}} alt="rider1">
+            </div>
+            <button class="arrow right-arrow" (click)="nextRider()"> &#8250; </button>
+        </div>
     </div>
 
     <!-- Schedule and Results -->
@@ -306,24 +308,33 @@
 
     </div>
 
-    
+
     <!-- Overview -->
     <div class="overview">
-        <h2>Partners</h2>
+        <h2 style="padding-left: 5px;">Partners</h2>
         <hr>
         <div class="overviewContainer">
-            <div class="overViewCard">
-                <h1 style="font-size: 6rem; color: gold;">5</h1>
-                <p>Wins by Men Team in 2024</p>
+            <div class="partners">
+                <img src="../../assets/ariders.jpg">
 
             </div>
-            <div class="overViewCard">
-                <h1 style="font-size: 6rem; color: gold;">5</h1>
-                <p>Wins by Women Team in 2024</p>
+            <div class="partners">
+                <img src="../../assets/ariders.jpg">
+
+
             </div>
-            <div class="overViewCard">
-                <h1 style="font-size: 6rem; color: gold;">5</h1>
-                <p>Wins by Junior Team in 2024</p>
+            <div class="partners">
+                <img src="../../assets/ariders.jpg">
+
+            </div>
+            <div class="partners">
+                <img src="../../assets/ariders.jpg">
+
+
+            </div>
+            <div class="partners">
+                <img src="../../assets/ariders.jpg">
+
             </div>
 
         </div>

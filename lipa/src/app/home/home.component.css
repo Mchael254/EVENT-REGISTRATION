@@ -144,6 +144,10 @@ hr {
 }
 
 /* riders */
+.riders{
+    margin-bottom: 3.8rem;
+  
+}
 .riderCard {
     height: 90%;
     width: 24%;
@@ -154,6 +158,7 @@ hr {
     border-radius: 10px;
     background-color: rgb(46, 45, 45);
     color: white;
+    
 }
 
 .riderCategory {
@@ -162,6 +167,7 @@ hr {
     justify-content: space-around;
     padding: auto;
     margin-bottom: 0.5rem;
+    
 }
 
 .select {
@@ -303,7 +309,7 @@ hr {
 }
 
 .overview{
-    height: 70vh;
+    height: 100vh;
     margin-bottom: 2.4rem;
     padding-top: 10px;
     
@@ -316,9 +322,10 @@ hr {
     color: white;
     margin-top: 2rem;
     height: 90%;
+    flex-wrap: wrap;
 
 }
-.overViewCard{
+.overViewCard, .partners{
     border-left: solid grey 1px;
     width: 30%;
     height: 80%;
@@ -329,7 +336,18 @@ hr {
     font-size: 1rem;
     line-height: 5px;
     color: #fff;
+    padding-left: 10px;
 }
+
+.partners{
+    height: 30vh;
+    border-left: none;
+        
+}
+.partners img{
+    width: 25%;
+}
+
 
 
 
@@ -441,6 +459,11 @@ hr {
         width: 95%;
     }
 
+    .overview{
+        margin-bottom: 1.8rem;
+        
+    }
+
     .overViewCard{
         width: 15%;
         line-height: 30px;
@@ -448,7 +471,15 @@ hr {
     .overViewCard h1{
         font-size: 1.5rem;
     }
+    .partners{
+        height: 10vh;
+    }
+    .partners img{
+        height: 90px;
+        width: 90px;
+    }
 
+    
 
 
 }
