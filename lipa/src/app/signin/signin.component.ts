@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
+  line:boolean = false;
+  loginError:boolean = false;
+  userName:string = '';
+  password:string = ''
+
+  onSubmit(){
+
+  }
 
 }

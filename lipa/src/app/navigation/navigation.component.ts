@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faBars, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faUser } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -10,11 +10,14 @@ import { faBars, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavigationComponent {
   faBars = faBars; 
-  faBack = faChevronLeft;
-  isDrawerOpen = false; 
+  faUser = faUser;
 
-  toggleDrawer() {
-    this.isDrawerOpen = !this.isDrawerOpen;
+
+  isSidenavOpen = false;
+
+  toggleSidenav() {
+    this.isSidenavOpen = !this.isSidenavOpen;
   }
+
 
 }

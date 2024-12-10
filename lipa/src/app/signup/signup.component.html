@@ -1,1 +1,36 @@
-<p>signup works!</p>
+<div class="container">
+    <div class="logo">
+        <video width="320" height="280"  autoplay>
+            <source src="../../assets/ARIDERSS.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="signinContainer">
+        <p *ngIf="line" class="line"></p>
+        <h1>A-RIDERS</h1>
+        <div class="formContainer">
+            <form id="signup-form" (ngSubmit)="onSubmit()">
+                <p id="response">{{ loginError }}</p>
+                <input type="password" placeholder="First Name" [(ngModel)]="firstName" name="firstName"
+                    data-cy="password">
+                <input type="password" placeholder="Second Name" [(ngModel)]="lastName" name="lastName"
+                    data-cy="password">
+                <input type="text" placeholder="username" [(ngModel)]="userName" name="userName" data-cy="userName">
+                <input type="text" placeholder="email" [(ngModel)]="userEmail" name="userEmail" data-cy="userName">
+                <input type="password" placeholder="password" [(ngModel)]="password" name="password" data-cy="password">
+                <input type="password" placeholder="Confirm password" [(ngModel)]="confirmPassword"
+                    name="confirmPassword" data-cy="password">
+                <button type="submit" data-cy="signin-btn" value="Submit">Sign up</button>
+            </form>
+        </div>
+
+
+        <div class="login">
+            <p>Already a member?</p>
+            <a routerLink="/signin">Signin </a>
+        </div>
+
+    </div>
+
+</div>

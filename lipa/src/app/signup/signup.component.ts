@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
+  line:boolean = false;
+  loginError:boolean = false;
+  userName:string = '';
+  password:string = '';
+  userEmail:string = '';
+  confirmPassword:string = '';
+  firstName:string = '';
+  lastName:string = '';
+
+  onSubmit(){
+
+  }
 
 }

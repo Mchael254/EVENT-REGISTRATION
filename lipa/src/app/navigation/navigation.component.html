@@ -1,32 +1,35 @@
 <div class="navigation">
     <div class="logo">
-        <img src="/assets/ariders.jpg">
+        <img src="../../assets/ariders.jpg" alt="Ariders Logo">
+
     </div>
-    <div class="right">
+    <div class="links">
         <a routerLink="/home">Home</a>
-        <a routerLink="/riders">Riders</a>
-        <a routerLink="/riders">Events</a>
-        <a routerLink="/signin">Login</a>
-        <a routerLink="/signin">Contact</a>
-        <a routerLink="/signin">Board</a>
+        <a routerLink="/shop">Shop</a>
+        <a routerLink="/fanPeleton">Fan Peleton</a>
+
+    </div>
+    <div class="support">
+        <a routerLink="/donate">Support</a>
+
+    </div>
+    <div class="account">
+        <a routerLink="/signin"><fa-icon [icon]="faUser"></fa-icon></a>
     </div>
 
-    <a class="support" routerLink="/signin">Support</a>
+    <div class="nav">
+        <a (click)="toggleSidenav()"><fa-icon [icon]="faBars"></fa-icon></a>
+    </div>
 
-    <fa-icon [icon]="faBars" (click)="toggleDrawer()" class="bars"></fa-icon>
-
-    <div class="drawer" [class.open]="isDrawerOpen">
-        <div class="drawer-content">
-            <fa-icon [icon]="faBack" (click)="toggleDrawer()"></fa-icon>
-            <div class="navigators">
-                <a routerLink="/home">Home</a>
-                <a routerLink="/riders">Riders</a>
-                <a routerLink="/riders">Events</a>
-                <a routerLink="/signin">Login</a>
-                <a routerLink="/signin">Contact</a>
-                <a routerLink="/signin">Board</a>    
-            </div>
-           
+    <div class="side-panel" [ngClass]="{'side-panel-open': isSidenavOpen}">
+        <div class="side-panel-content">
+            <a href="https://www.strava.com"><fa-icon [icon]="faUser"></fa-icon></a>
+            <a routerLink="/home">Home</a>
+            <a routerLink="/shop">Shop</a>
+            <a routerLink="/fanPeleton">Fan Peleton</a>
+            <a routerLink="/donate">Support</a>
         </div>
+        <div class="close-btn" (click)="toggleSidenav()">X</div>
     </div>
+
 </div>
