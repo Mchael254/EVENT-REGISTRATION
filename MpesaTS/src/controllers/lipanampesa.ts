@@ -1,10 +1,12 @@
 import axios from "axios";
 import { Request, Response } from "express";
+import { Server } from "socket.io";
 
 import ngrok from "ngrok";
 import dotenv from "dotenv";
 import { RequestExtended } from "../middleware/generateToken";
 import { timestamp } from "../middleware/timeStamp";
+import { io } from "../webhook";
 dotenv.config();
 
 
@@ -56,13 +58,30 @@ export const handleStkPush = async (req: RequestExtended, res: Response) => {
       data: response.data,
     });
   } catch (error: any) {
-    console.log("Error in STK Push: ", error);
-    res.status(500).json({
-      message: "Failed",
-      error: error.message,
-    });
+    // console.log("Error in STK Push: ", error);
+    if (error.response) {
+      console.log("Error response: ", error.response.data);
+      res.status(400).json({
+        message: "Failed",
+        error: error.response.data,
+      });
+    } else if (error.request) {
+      console.log("Error request: ", error.request);
+      res.status(500).json({
+        message: "Failed",
+        error: error.message,
+      });
+    } else {
+      console.log("Error message: ", error.message);
+      res.status(500).json({
+        message: "Failed",
+        error: error.message,
+      });
+    }
+
   }
 };
+
 
 export const stkPushCallback = async (req: RequestExtended, res: Response) => {
   const Order_ID = req.params.Order_ID;
@@ -84,22 +103,35 @@ export const stkPushCallback = async (req: RequestExtended, res: Response) => {
     console.log("Order ID:", Order_ID);
     console.log("Callback Metadata:", CallbackMetadata);
 
+    let status = "";
+
     // Handle different ResultCode cases
     if (ResultCode === 0) {
       console.log("Transaction successful");
-    } else if (ResultCode === 1032) { 
+      status = "success";
+
+    } else if (ResultCode === 1032) {
       console.log("User canceled the transaction");
-  
+      status = "canceled";
+
     } else {
       console.log("Transaction failed or was not completed");
-    
+      status = "failed";
+
     }
 
-    // Respond back to the callback handler
-    res.status(200).json({
-      message: "Callback processed successfully",
-      data: responseData,
+    io.emit("transactionUpdate", {
+      orderId: Order_ID,
+      status: status,
+      message: ResultDesc || "No description available",
     });
+
+    // Respond with the transaction status
+    res.status(200).json({
+      status: status,
+      message: ResultDesc || "No description available"
+    });
+
 
   } catch (error: any) {
     console.log("Error in STK Push Callback: ", error);
@@ -109,3 +141,7 @@ export const stkPushCallback = async (req: RequestExtended, res: Response) => {
     });
   }
 }
+
+
+
+
