@@ -9,15 +9,16 @@
     <div class="signinContainer">
         <p *ngIf="line" class="line"></p>
         <h1>A-RIDERS</h1>
+        <p>Lets get you started!</p>
         <div class="formContainer">
             <form id="signup-form" (ngSubmit)="onSubmit()">
                 <p id="response">{{ loginError }}</p>
-                <input type="password" placeholder="First Name" [(ngModel)]="firstName" name="firstName"
-                    data-cy="password">
-                <input type="password" placeholder="Second Name" [(ngModel)]="lastName" name="lastName"
-                    data-cy="password">
+                <input type="text" placeholder="First Name" [(ngModel)]="firstName" name="firstName"
+                    data-cy="firstName">
+                <input type="text" placeholder="Second Name" [(ngModel)]="lastName" name="lastName"
+                    data-cy="lastName">
                 <input type="text" placeholder="username" [(ngModel)]="userName" name="userName" data-cy="userName">
-                <input type="text" placeholder="email" [(ngModel)]="userEmail" name="userEmail" data-cy="userName">
+                <input type="email" placeholder="email" [(ngModel)]="userEmail" name="userEmail" data-cy="userName">
                 <input type="password" placeholder="password" [(ngModel)]="password" name="password" data-cy="password">
                 <input type="password" placeholder="Confirm password" [(ngModel)]="confirmPassword"
                     name="confirmPassword" data-cy="password">
