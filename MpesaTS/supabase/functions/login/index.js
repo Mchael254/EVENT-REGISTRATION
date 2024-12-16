@@ -32,19 +32,22 @@ Deno.serve((req) => __awaiter(void 0, void 0, void 0, function* () {
             if (!userEmail || !password) {
                 return new Response('Email and password are required', { status: 400, headers: exports.corsHeaders });
             }
-            // Check if the user exists in the database (Supabase query)
+            // Check if the password matches 
             const { data: user, error } = yield supabase
                 .from('client')
-                .select('id', 'userEmail', 'password')
+                .select('userEmail', 'password')
                 .eq('userEmail', userEmail)
                 .single();
             // If user does not exist
             if (error || !user) {
-                return new Response('Invalid email or password', { status: 401, headers: exports.corsHeaders });
+                return new Response('user does not exist', { status: 401, headers: exports.corsHeaders });
             }
-            // Validate password 
+            // Validate password from the database plain text
             if (user.password !== password) {
-                return new Response('Invalid email or password', { status: 401, headers: exports.corsHeaders });
+                return new Response('Invalid password', { status: 401, headers: exports.corsHeaders });
+            }
+            if (user.userEmail !== userEmail) {
+                return new Response('Invalid email', { status: 401, headers: exports.corsHeaders });
             }
             return new Response(JSON.stringify({ message: 'Login successful', userId: user.id }), { status: 200, headers: Object.assign(Object.assign({}, exports.corsHeaders), { 'Content-Type': 'application/json' }) });
         }

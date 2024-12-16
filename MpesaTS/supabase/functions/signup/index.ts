@@ -2,6 +2,7 @@
 import { serve } from "https://deno.land/std@0.131.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js";
 import { v4 } from "https://deno.land/std@0.81.0/uuid/mod.ts";
+import * as bcrypt from "https://deno.land/x/bcrypt/mod.ts";
 
 
 const supUrl = Deno.env.get("_SUPABASE_URL") as string;
@@ -84,3 +85,6 @@ Deno.serve(async (req) => {
 
 
 });
+
+
+

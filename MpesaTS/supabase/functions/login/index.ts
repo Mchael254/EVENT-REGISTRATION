@@ -28,23 +28,37 @@ Deno.serve(async (req) => {
         return new Response('Email and password are required', { status: 400, headers: corsHeaders });
       }
 
-      // Check if the user exists in the database (Supabase query)
+      const targetPassword = 'Michael123.100#';
+
+      // Check if the password matches 
       const { data: user, error } = await supabase
         .from('client')
-        .select('id', 'userEmail', 'password')
+        .select('id, "userEmail", "password"')
         .eq('userEmail', userEmail)
         .single();
 
-      // If user does not exist
+      // error or no user found
       if (error || !user) {
-        return new Response('Invalid email or password', { status: 401, headers: corsHeaders });
+        console.error('Supabase query error:', error);
+        return new Response('User does not exist', {
+          status: 401,
+          headers: corsHeaders
+        });
       }
 
-      // Validate password 
-      if (user.password !== password) {
-        return new Response('Invalid email or password', { status: 401, headers: corsHeaders });
+      const trimmedPassword = password.trim();
+      const storedPassword = user.password?.trim();
+
+      // Check if the passwords match 
+      if (trimmedPassword !== storedPassword) {
+        console.error('Password mismatch for user:', userEmail);
+        return new Response('Invalid password', {
+          status: 401,
+          headers: corsHeaders
+        });
       }
 
+      // successful login response
       return new Response(
         JSON.stringify({ message: 'Login successful', userId: user.id }),
         { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -64,5 +78,7 @@ Deno.serve(async (req) => {
 
 
 })
+
+
 
 
