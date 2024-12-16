@@ -18,6 +18,14 @@
   border:solid 1px #D9D9D9;
 }
 
+#response{
+  /* border: solid green 1px; */
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  color: red;
+}
+
 .signinContainer {
     position: relative;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);

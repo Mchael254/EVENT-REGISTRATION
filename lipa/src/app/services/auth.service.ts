@@ -37,7 +37,7 @@ export class AuthService {
 
   }
 
-  //login
+  // login
   login(loginData: { userEmail: string, password: string }): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -46,22 +46,25 @@ export class AuthService {
     return this.http.post(this.loginUserUrl, loginData, { headers }).pipe(
       catchError((error) => {
         if (error.status === 401) {
-          return throwError(() => new Error('Invalid email or password'));
+          return throwError(() => new Error(error.error));
         }
-        return throwError(() => new Error('Network error. Please try again later.'));
+        return throwError(() => new Error(error.error));
       })
     );
   }
 
 
 
+
+
+
   //get users
   async getUsers() {
     const { data, error } = await this.supabase.functions.invoke('hello-world');
-    
+
     if (error) {
       console.error('Error fetching users:', error.message);
-      throw error;  
+      throw error;
     }
     return data;
   }

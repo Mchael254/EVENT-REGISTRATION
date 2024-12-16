@@ -26,6 +26,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon'; // Optional, for icons
 import { MatListModule } from '@angular/material/list';
+import { FanComponent } from './fan/fan.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { MatListModule } from '@angular/material/list';
     SignupComponent,
     NavigationComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    FanComponent
   ],
   imports: [
     BrowserModule,

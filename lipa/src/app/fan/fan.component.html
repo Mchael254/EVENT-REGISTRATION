@@ -1,0 +1,103 @@
+<nav class="navbar">
+    <div class="logo">Cycling Club</div>
+    <ul class="nav-links">
+        <li><a href="#events">Events</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#merchandise">Merchandise</a></li>
+        <li><a href="#fan-wall">Fan Wall</a></li>
+    </ul>
+</nav>
+
+<section id="events" class="events">
+    <h2>Upcoming Events</h2>
+    <div class="eventContainer">
+        <button class="arrow left-arrow" (click)="prevRoutes()"> &#8249; </button>
+        <div class="eventCard" *ngFor="let route of getDisplayedRoutes()">
+            <img src={{route.picture}} alt="route1">
+            <p>{{route.description}}</p>
+            <p>{{route.title}}</p>
+
+        </div>
+     
+        <button class="arrow right-arrow" (click)="nextRoutes()"> &#8250; </button>
+    </div>
+</section>
+
+<!-- Membership -->
+<section id="membership" class="membership">
+    <h2>Join Our Fan Peleton</h2>
+    <div class="memberContainer">
+        <div class="join">
+            <div class="funImage">
+                <img src="../../assets/community.jpg" alt="Fan Image">
+    
+            </div>
+            <div class="funMessage">
+                <h3>Join the Fun</h3>
+                <p>Join our fan peloton to get access to exclusive events, merchandise, and more!</p>
+            </div>
+        </div>
+        <div class="memberCategories">
+            <div class="membership-tier" style="background: linear-gradient(to right, #cd7f32, #b87333, #6f4f29)">
+                <h3>Bronze Peloton</h3>
+                <p>Access to event notifications and basic merchandise discounts.</p>
+                <a href="#"class="memberButton">Join Now</a>
+            </div>
+            <div class="membership-tier" style="background: linear-gradient(to right, #d3d3d3, #c0c0c0, #a8a8a8);">
+                <h3>Silver Peloton</h3>
+                <p>Access to virtual events and exclusive content.</p>
+                <a href="#" class="memberButton">Join Now</a>
+            </div>
+            <div class="membership-tier" style="background: linear-gradient(to right, #c9941d, #c8a54b);">
+                <h3>Gold Peloton</h3>
+                <p>VIP access to physical events, personal shout-outs, and more.</p>
+                <a href="#" class="memberButton">Join Now</a>
+            </div>
+    
+        </div>
+
+    </div>
+   
+</section>
+
+<!-- Merchandise -->
+<section id="merchandise" class="merchandise">
+    <h2>Exclusive Fan Gear</h2>
+    <hr>
+    <div class="merchandiseContainer">
+        <div class="merch-item">
+            <img src="../../assets/bibshort.webp" alt="Cycling Jersey">
+            <p>Cycling Jersey</p>
+            <a href="#" class="cta-button">Buy Now</a>
+        </div>
+        <div class="merch-item">
+            <img src="../../assets/bibshort.webp" alt="Water Bottle">
+            <p>Water Bottle</p>
+            <a href="#" class="cta-button">Buy Now</a>
+        </div>
+        <div class="merch-item">
+            <img src="../../assets/bibshort.webp" alt="Water Bottle">
+            <p>Water Bottle</p>
+            <a href="#" class="cta-button">Buy Now</a>
+        </div>
+        <div class="more">
+            <h3>More</h3>
+                
+        </div>
+
+    </div>
+   
+</section>
+
+
+<!-- Fan Wall -->
+<section id="fan-wall" class="fan-wall">
+    <h2>Product Categories</h2>
+   <div class="products">
+    <div class="productCategory" *ngFor="let product of products">
+        <img src={{product.picture}} alt="Cycling Jersey">
+        <p>Cycling Jersey</p>
+
+    </div>
+   </div>
+</section>

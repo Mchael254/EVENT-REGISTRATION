@@ -1,0 +1,344 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: black;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    color: gold;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 2rem;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: gold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../../assets/ariders.jpg') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    padding: 0.75rem 1.5rem;
+    background-color: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* Events Section */
+.eventContainer{
+    height: 73vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+
+}
+.events {
+    background-color: #f4f4f4;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.eventCard {
+    height: 95%;
+    width: 25%;
+    border-radius: 7px;
+    background-color: #f4f4f4;
+ 
+}
+
+.eventCard img {
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+    border-radius: 7px;
+}
+
+
+.event-card h3 {
+    margin-bottom: 1rem;
+}
+
+/* route */
+.routeContainer {
+    height: 55vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    border: solid red 2px;
+}
+
+.routeCard {
+    max-height: 95%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.routeCard img {
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+}
+
+.arrow {
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 1000;
+}
+
+/* Membership Section */
+.membership {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    text-align: center;
+    /* border: solid green 2px; */
+}
+.memberContainer{
+    display: flex;
+    justify-content: space-around;
+    /* border: solid blue 2px; */
+    width: 95vw;
+    height: 92vh;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+}
+.memberCategories{
+    border: solid #fff 1px;
+    border-radius: 5px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: black;
+    height: 90%;
+}
+
+.membership-tier {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 40%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.memberButton{
+    padding: 0.75rem 1.5rem;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.membership-tier h3 {
+    margin-bottom: 1rem;
+}
+
+.join{
+    /* border: solid blue 2px; */
+    height: 90%;
+    width: 50%;
+    margin-bottom: 0.5rem;
+    background-color: #000;
+}
+.funImage img{
+    width: 75%;
+    border-radius: 10px;
+}
+.funMessage{
+    margin-top: 1rem;
+}
+
+
+/* Merchandise Section */
+.merchandise {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f4f4f4;
+    text-align: left;
+}
+.merchandise hr{
+    width: 11%;
+    background-color:black;
+    height: 5px;
+}
+.merchandiseContainer{
+    display: flex;
+    /* border: solid blue 2px; */
+    width: 95vw;
+    align-items: center;
+    height: 80vh;
+    padding: 5px;
+}
+.merch-item {
+    height: 70vh;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: calc(33% - 2rem);
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.merch-item img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.merch-item p {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+.more{
+    height: 40%;
+    width: 20%;
+    border-radius: 10px;
+    background-color: black;
+    color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:1s ease;
+    cursor: pointer;
+}
+.more:hover{
+    background-color: #f4f4f4;
+    color: black;
+}
+
+/* Fan Wall Section */
+.products{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.productCategory{
+    height: 50vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    margin: 1rem;
+}
+.productCategory img{
+    width: 100%;
+}
+.fan-wall {
+    background-color: black;
+    color: gold;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.testimonial {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem;
+    width: calc(50% - 2rem);
+    display: inline-block;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}

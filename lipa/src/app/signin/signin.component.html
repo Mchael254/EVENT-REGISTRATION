@@ -12,7 +12,7 @@
         <div class="formContainer">
             <form id="signup-form" (ngSubmit)="onSubmit()">
                 <p id="response">{{ loginError }}</p>
-                <input type="text" placeholder="username" [(ngModel)]="userName" name="userName" data-cy="userName">
+                <input type="text" placeholder="userEmail" [(ngModel)]="userEmail" name="userEmail" data-cy="userEmail">
                 <input type="password" placeholder="password" [(ngModel)]="password" name="password" data-cy="password">
                 <button type="submit" data-cy="signin-btn" value="Submit">Sign in</button>
                 <a routerLink="/passwordReset" data-cy="forgotPassword">Forgot password?</a>
