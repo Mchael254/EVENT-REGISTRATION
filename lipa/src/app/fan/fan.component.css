@@ -12,40 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar */
-.navbar {
-    background-color: black;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar .logo {
-    color: gold;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.navbar .nav-links li {
-    margin-left: 2rem;
-}
-
-.navbar .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.navbar .nav-links a:hover {
-    color: gold;
-}
 
 /* Hero Section */
 .hero {
@@ -158,7 +124,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    z-index: 1000;
+    z-index: 900;
 }
 
 /* Membership Section */
@@ -341,4 +307,104 @@ body {
     color: white;
     text-align: center;
     padding: 1rem;
+}
+
+/*media query*/
+@media screen and (max-width: 480px) {
+    .events{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .eventContainer{
+        width: 100vw;
+    }
+    .eventCard{
+        width: 75%;
+    }
+
+    /* membeship*/
+    .membership{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .funImage img{
+        width: 100%;
+    }
+    .memberContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 100vw;
+    }
+    .join{
+        width: 99%;
+        margin-bottom: 30px;
+    }
+    .memberCategories{
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .membership-tier{
+        width: 80%;
+        height: 30vh;
+    }
+
+    /* merchandise */
+    .merchandise{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .merchandise hr{
+        width: 30%;
+    }
+    .merchandiseContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100vw;
+    }
+    .merch-item{
+        width: 90%;
+        height: 50vh;
+    }
+    .more{
+        width: 40%;
+        height: 15vh;
+    }
+
+    /* product category */
+    .fan-wall{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .products{
+        width: 98vw;
+        height: 90vh;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+    .productCategory{
+        width: 30%;
+        height: 10vh;
+    }
+  
+   
+
+    
+  
+
+   
 }

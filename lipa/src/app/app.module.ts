@@ -27,6 +27,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon'; // Optional, for icons
 import { MatListModule } from '@angular/material/list';
 import { FanComponent } from './fan/fan.component';
+import { ProductComponent } from './product/product.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { FanComponent } from './fan/fan.component';
     NavigationComponent,
     FooterComponent,
     HomeComponent,
-    FanComponent
+    FanComponent,
+    ProductComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

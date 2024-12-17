@@ -27,7 +27,7 @@
 }
 
 .links a:hover {
-    color: gold;
+    background:linear-gradient(to right, #c9941d, #c8a54b);
 }
 
 .account {
@@ -38,7 +38,7 @@
 }
 
 .support a {
-    background-color: gold;
+    background:linear-gradient(to right, #c9941d, #c8a54b);
     color: black;
     padding: 4px 9px;
     text-decoration: none;
@@ -85,7 +85,7 @@ fa-icon {
 }
 
 .side-panel-content a:hover {
-    background-color: gold;
+    background:linear-gradient(to right, #c9941d, #c8a54b);
 }
 
 .close-btn {

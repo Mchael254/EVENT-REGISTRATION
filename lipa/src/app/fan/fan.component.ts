@@ -1,11 +1,64 @@
-import { Component } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Component, OnInit } from '@angular/core';
+import { distinctUntilChanged, tap } from 'rxjs';
 
 @Component({
   selector: 'app-fan',
   templateUrl: './fan.component.html',
   styleUrls: ['./fan.component.css']
 })
-export class FanComponent {
+export class FanComponent implements OnInit {
+  constructor(private breakpointObserver: BreakpointObserver) { }
+
+  readonly breakpoint$ = this.breakpointObserver
+    .observe([Breakpoints.Large, Breakpoints.Medium, Breakpoints.Small, '(min-width: 500px)'])
+    .pipe(
+      distinctUntilChanged(),
+    );
+
+  ngOnInit(): void {
+    this.detectDeviceSize();
+    this.breakpoint$.subscribe(() => this.adjustMaxFeatures());
+
+  }
+  private detectDeviceSize() {
+    const width = window.innerWidth;
+
+    if (width >= 1200) {
+      this.maxFeatures = 3;
+      this.maxRoutes = 3;
+      this.maxProducts = 3;
+    } else if (width >= 768 && width < 1200) {
+      this.maxFeatures = 2;
+      this.maxRoutes = 2;
+      this.maxProducts = 2;
+    } else {
+      this.maxFeatures = 1;
+      this.maxRoutes = 1;
+      this.maxProducts = 1;
+    }
+  }
+
+  private adjustMaxFeatures() {
+    if (this.breakpointObserver.isMatched(Breakpoints.Large)) {
+      this.maxFeatures = 3;
+      this.maxRoutes = 3;
+      this.maxProducts = 3;
+    } else if (this.breakpointObserver.isMatched(Breakpoints.Medium)) {
+      this.maxFeatures = 2;
+      this.maxRoutes = 2;
+      this.maxProducts = 2;
+
+    } else if (this.breakpointObserver.isMatched('(min-width: 500px)')) {
+      this.maxFeatures = 1;
+      this.maxRoutes = 1;
+      this.maxProducts = 1;
+    
+    }
+  }
+
+  maxFeatures = 3;
+  maxRoutes = 3;
 
   routes = [
     {
@@ -33,7 +86,7 @@ export class FanComponent {
 
 
   currentRoute = 0;
-  maxRoutes = 3;
+  maxProducts = 3;
 
   prevRoutes() {
     this.currentRoute =

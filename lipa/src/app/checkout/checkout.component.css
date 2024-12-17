@@ -1,0 +1,146 @@
+
+/* Container */
+.checkoutContainer {
+    width: 93vw;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1f1f1; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+
+.checkout-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 99%;
+}
+
+/* Order Summary */
+.orderSummary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 65vh;
+    width: 58%;
+    padding: 20px;
+}
+.adrress{
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+    align-items: center;
+    line-height: 25px;
+    padding: 10px;
+    background-color: white;
+}
+.edit{
+    display: flex;
+    align-items: center;
+}
+
+
+.productDetails{
+    background-color: white;
+    height: 30vh;
+    padding: 10px;
+}
+.productDetailsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.buttons button{
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background:linear-gradient(to right, #c9941d, #c8a54b);
+    color: white;
+    font-size: larger;
+    cursor: pointer;
+}
+.productDetails img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+
+
+
+/* Billing Details */
+.billingDetails {
+    width: 35%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.summary{
+    background-color: white;
+    width: 90%;
+    padding: 5px;
+}
+
+.summary ul {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 5px;
+    overflow-y: auto;
+
+}
+
+.summary ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+   
+}
+
+.order{
+    display: flex;
+    justify-content: center;
+    font-weight: 20px;
+
+}
+.order button{
+    padding: 10px 20px;
+    background:linear-gradient(to right, #c9941d, #c8a54b);
+    color: black;
+    border: none;
+    border-radius: 25px;
+    width: 80%;
+    cursor: pointer;
+    font-size: large;
+}
+.informationSafety{
+    background-color: white ;
+    width: 90%;
+    height: 10vh;
+    padding: 5px;
+}
+.informationSafety img{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    
+}

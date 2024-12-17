@@ -11,6 +11,8 @@ import { SignupComponent } from './signup/signup.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FanComponent } from './fan/fan.component';
+import { ProductComponent } from './product/product.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'full'},
@@ -24,7 +26,14 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent},
   {path:'footer',component:FooterComponent},
   {path:'home',component:HomeComponent},
-  {path:'fan',component:FanComponent}
+  {path:'fan',component:FanComponent},
+  {path:'product',component:ProductComponent},
+  {path:'checkout',component:CheckoutComponent}
+
+
+
+
+
 
 
 

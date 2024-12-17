@@ -1,12 +1,4 @@
-<nav class="navbar">
-    <div class="logo">Cycling Club</div>
-    <ul class="nav-links">
-        <li><a href="#events">Events</a></li>
-        <li><a href="#membership">Membership</a></li>
-        <li><a href="#merchandise">Merchandise</a></li>
-        <li><a href="#fan-wall">Fan Wall</a></li>
-    </ul>
-</nav>
+<app-navigation></app-navigation>
 
 <section id="events" class="events">
     <h2>Upcoming Events</h2>
@@ -16,9 +8,7 @@
             <img src={{route.picture}} alt="route1">
             <p>{{route.description}}</p>
             <p>{{route.title}}</p>
-
         </div>
-     
         <button class="arrow right-arrow" (click)="nextRoutes()"> &#8250; </button>
     </div>
 </section>
@@ -30,7 +20,7 @@
         <div class="join">
             <div class="funImage">
                 <img src="../../assets/community.jpg" alt="Fan Image">
-    
+
             </div>
             <div class="funMessage">
                 <h3>Join the Fun</h3>
@@ -41,7 +31,7 @@
             <div class="membership-tier" style="background: linear-gradient(to right, #cd7f32, #b87333, #6f4f29)">
                 <h3>Bronze Peloton</h3>
                 <p>Access to event notifications and basic merchandise discounts.</p>
-                <a href="#"class="memberButton">Join Now</a>
+                <a href="#" class="memberButton">Join Now</a>
             </div>
             <div class="membership-tier" style="background: linear-gradient(to right, #d3d3d3, #c0c0c0, #a8a8a8);">
                 <h3>Silver Peloton</h3>
@@ -53,11 +43,11 @@
                 <p>VIP access to physical events, personal shout-outs, and more.</p>
                 <a href="#" class="memberButton">Join Now</a>
             </div>
-    
+
         </div>
 
     </div>
-   
+
 </section>
 
 <!-- Merchandise -->
@@ -82,22 +72,22 @@
         </div>
         <div class="more">
             <h3>More</h3>
-                
+
         </div>
 
     </div>
-   
-</section>
 
+</section>
 
 <!-- Fan Wall -->
 <section id="fan-wall" class="fan-wall">
     <h2>Product Categories</h2>
-   <div class="products">
-    <div class="productCategory" *ngFor="let product of products">
-        <img src={{product.picture}} alt="Cycling Jersey">
-        <p>Cycling Jersey</p>
-
+    <div class="products">
+        <div class="productCategory" *ngFor="let product of products">
+            <img src={{product.picture}} alt="Cycling Jersey">
+            <p>Cycling Jersey</p>
+        </div>
     </div>
-   </div>
 </section>
+
+<app-footer></app-footer>
