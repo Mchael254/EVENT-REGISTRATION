@@ -1,0 +1,328 @@
+<div id="profileContainer">
+    <!-- Navigation Panel -->
+    <div class="navigation">
+        <h2>Cycling Club</h2>
+        <ul class="nav-links">
+            <li><a (click)="setView('dashboard')">Dashboard/Home</a></li>
+            <li><a (click)="setView('profile')">My Profile</a></li>
+            <li><a (click)="setView('activities')">My Activities</a></li>
+            <li><a (click)="setView('upcomingEvents')">Upcoming Events</a></li>
+            <!-- <li><a href="#groups">Groups/Teams</a></li> -->
+            <li><a (click)="setView('leaderboard')">Leaderboard</a></li>
+            <!-- <li><a href="#challenges">Challenges</a></li> -->
+            <li><a (click)="setView('gearLocker')">Gear Locker</a></li>
+            <li><a (click)="setView('announcements')">Announcements</a></li>
+            <li><a (click)="setView('membership')">Membership</a></li>
+            <li><a (click)="setView('support')">Support</a></li>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#logout">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- View Panel -->
+    <div class="view">
+        <h1>Welcome to A-RIDERS Cycling Club!</h1>
+        <!-- dashboard -->
+        <div class="dashboard" *ngIf="currentView === 'dashboard'">
+            <div class="cards">
+                <h3>Total Rides</h3>
+                <h3>56</h3>
+            </div>
+            <div class="cards">
+                <h3>Distance Covered</h3>
+                <h3>56</h3>
+            </div>
+            <div class="cards">
+                <h3>Club Rank</h3>
+                <h3>56</h3>
+            </div>
+        </div>
+
+        <!-- profile -->
+        <div class="profile" *ngIf="currentView === 'profile'">
+            <div class="profileContainer">
+                <div class="profileDetails">
+                    <img src="../../assets/Jonas.png" alt="profile" class="profile-image">
+                    <p><strong>Name</strong>: Michael</p>
+                    <p><strong>Email</strong>: Michealvenum007gmail.com</p>
+                    <p><strong>Phone</strong>: 0703142445</p>
+                    <p><strong>Address</strong>: Mombasa</p>
+                    <p><strong>Category</strong>: MTB, Road</p>
+                    <a routerLink="/signin"><fa-icon [icon]="faEdit"></fa-icon></a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div class="upcomingEvents" *ngIf="currentView === 'upcomingEvents'">
+            <h3>Upcoming Events</h3>
+            <div class="eventsContainer">
+                <div class="eventCard">
+                    <h3>Event Name</h3>
+                    <img src="../../assets/race.jpg" alt="event" class="event-image">
+                    <p> <strong>Event Date</strong>: 12/30/24</p>
+                    <p><strong>Location</strong> Southern Bypass</p>
+                    <p>Event Description</p>
+                    <p><strong>Registration fee</strong> Ksh:500</p>
+                    <p><strong>Distcance</strong> 80KM</p>
+                    <button>Register</button>
+                </div>
+                <div class="eventCard">
+                    <h3>Event Name</h3>
+                    <img src="../../assets/race.jpg" alt="event" class="event-image">
+                    <p> <strong>Event Date</strong>: 12/30/24</p>
+                    <p><strong>Location</strong> Southern Bypass</p>
+                    <p>Event Description</p>
+                    <p><strong>Registration fee</strong> Ksh:500</p>
+                    <p><strong>Distcance</strong> 80KM</p>
+                    <button>Register</button>
+                </div>
+                <div class="eventCard">
+                    <h3>Event Name</h3>
+                    <img src="../../assets/race.jpg" alt="event" class="event-image">
+                    <p> <strong>Event Date</strong>: 12/30/24</p>
+                    <p><strong>Location</strong> Southern Bypass</p>
+                    <p>Event Description</p>
+                    <p><strong>Registration fee</strong> Ksh:500</p>
+                    <p><strong>Distcance</strong> 80KM</p>
+                    <button>Register</button>
+                </div>
+                <div class="eventCard">
+                    <h3>Event Name</h3>
+                    <img src="../../assets/race.jpg" alt="event" class="event-image">
+                    <p> <strong>Event Date</strong>: 12/30/24</p>
+                    <p><strong>Location</strong> Southern Bypass</p>
+                    <p>Event Description</p>
+                    <p><strong>Registration fee</strong> Ksh:500</p>
+                    <p><strong>Distcance</strong> 80KM</p>
+                    <button>Register</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- leaderboard -->
+        <div class="leaderboard-container" *ngIf="currentView === 'leaderboard'">
+            <select name="category" id="select">
+                <option value="all">All</option>
+                <option value="mtb">Elevation</option>
+                <option value="road">Distance</option>
+                <option value="track">Rides</option>
+            </select>
+            <div class="leaderboard-title">Top Performers</div>
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Total Distance (km)</th>
+                        <th>Rides Completed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight">
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>3,450</td>
+                        <td>120</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>3,200</td>
+                        <td>110</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Michael Lee</td>
+                        <td>2,980</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Emily Davis</td>
+                        <td>2,750</td>
+                        <td>95</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Chris Wilson</td>
+                        <td>2,500</td>
+                        <td>90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- announcements -->
+        <div class="announcements" *ngIf="currentView === 'announcements'">
+            <div class="header">
+                <h1>Club Announcements</h1>
+            </div>
+            <div class="announcements-container">
+                <div class="announcement">
+                    <h2>Upcoming Charity Ride</h2>
+                    <p>Join us for a charity ride on Saturday, April 15th, to support local communities. The ride starts
+                        at 8:00 AM from the downtown park. Don’t forget to register in advance!</p>
+                </div>
+
+                <div class="announcement">
+                    <h2>Monthly Maintenance Workshop</h2>
+                    <p>Learn how to maintain and repair your bike at our workshop on April 20th. The event will take
+                        place at the club headquarters from 6:00 PM to 8:00 PM. Tools will be provided.</p>
+                </div>
+
+                <div class="announcement">
+                    <h2>Leaderboards Updated</h2>
+                    <p>Check out the latest standings on the leaderboard page! Congratulations to our top riders for
+                        March.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Gear Locker -->
+        <div class="gearLocker" *ngIf="currentView === 'gearLocker'">
+            <div class="header">
+                <h1>Gear Locker</h1>
+            </div>
+
+            <div class="products">
+                <h2>Featured Products</h2>
+                <div class="productsContainer">
+                    <div class="productCard" *ngFor="let product of getDisplayedProducts()">
+
+                        <img src={{product.picture}} alt="product1">
+
+                        <div class="productDescription">
+                            <p>{{product.description}}</p>
+                            <p style="color: gold;">{{product.price}}</p>
+                        </div>
+
+                    </div>
+                    <div class="more">
+                        <h2>More</h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- membership -->
+        <div class="membership" *ngIf="currentView === 'membership'">
+            <div class="header">
+                <h1>Membership</h1>
+            </div>
+            <div class="categories">
+                <p><strong>Current Membership</strong>: Bronze</p>
+                <p><strong>Price</strong>: Ksh 500</p>
+                <p><strong>Membership Expiry</strong>: 12/30/24</p>
+            </div>
+
+            <div class="plans">
+                <div class="memberCategories">
+                    <div class="membership-tier"
+                        style="background: linear-gradient(to right, #cd7f32, #b87333, #6f4f29)">
+                        <h3>Bronze Peloton</h3>
+                        <p>Access to event notifications and basic merchandise discounts.</p>
+                        <a href="#" class="memberButton">Upgrade Now</a>
+                    </div>
+                    <div class="membership-tier"
+                        style="background: linear-gradient(to right, #d3d3d3, #c0c0c0, #a8a8a8);">
+                        <h3>Silver Peloton</h3>
+                        <p>Access to virtual events and exclusive content.</p>
+                        <a href="#" class="memberButton">Upgrade Now</a>
+                    </div>
+                    <div class="membership-tier" style="background: linear-gradient(to right, #c9941d, #c8a54b);">
+                        <h3>Gold Peloton</h3>
+                        <p>VIP access to physical events, personal shout-outs, and more.</p>
+                        <a href="#" class="memberButton">Upgrade Now</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- support -->
+        <div class="support" *ngIf="currentView === 'support'">
+            <div class="header">
+                <h1>Support Center</h1>
+            </div>
+
+            <div class="support-container">
+                <h2>How Can We Help You?</h2>
+
+                <form class="support-form">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="issue">Issue Type</label>
+                    <select id="issue" name="issue">
+                        <option value="membership">Membership</option>
+                        <option value="events">Events</option>
+                        <option value="technical">Technical Support</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Describe your issue"
+                        required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- activities -->
+        <div class="activities" *ngIf="currentView === 'activities'">
+            <div class="header">
+                <h1>My Activities</h1>
+            </div>
+            <div class="activities-container">
+
+                <div class="activity">
+                    <div class="activity-info">
+                        <h3>Morning Ride</h3>
+                        <p>Date: January 1, 2024</p>
+                        <p>Distance: 25 km</p>
+                    </div>
+                    <div class="activity-actions">
+                        <button>View Details</button>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <div class="activity-info">
+                        <h3>Group Training</h3>
+                        <p>Date: December 28, 2023</p>
+                        <p>Duration: 2 hours</p>
+                    </div>
+                    <div class="activity-actions">
+                        <button>View Details</button>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <div class="activity-info">
+                        <h3>Charity Ride</h3>
+                        <p>Date: December 25, 2023</p>
+                        <p>Raised: $500</p>
+                    </div>
+                    <div class="activity-actions">
+                        <button>View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

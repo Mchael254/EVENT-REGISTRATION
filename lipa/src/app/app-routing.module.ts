@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { FanComponent } from './fan/fan.component';
 import { ProductComponent } from './product/product.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'full'},
@@ -28,16 +29,8 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'fan',component:FanComponent},
   {path:'product',component:ProductComponent},
-  {path:'checkout',component:CheckoutComponent}
-
-
-
-
-
-
-
-
-
+  {path:'checkout',component:CheckoutComponent},
+  {path:'profile',component:ProfileComponent}
 
 
 

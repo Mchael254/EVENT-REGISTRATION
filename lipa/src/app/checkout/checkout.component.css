@@ -135,12 +135,47 @@
     width: 30px;
     height: 30px;
 }
+fa-icon{
+    font-size: 25px;
+    color:  #c9941d;
+
+}
 
 
 
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media screen and (max-width: 480px) {
+    .checkoutContainer{
+        width: 83vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .orderSummary{
+        width: 83vw;
+        display: flex;
+        align-items: center;
+    }
+    .adrress{
+        width:83vw ;
+    }
+
+    .billingDetails{
+        width: 85vw;
+        height: 80vh;
+    }
+    .summary{
+        width: 83vw;
+    }
+    .informationSafety{
+        height: 10vh;
+        width: 83vw;
+        font-size: small;
+        color: gray;
+    }
     
 }

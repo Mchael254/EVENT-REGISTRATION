@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faEdit} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-checkout',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent {
+  faEdit = faEdit;
 
 }

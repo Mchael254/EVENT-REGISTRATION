@@ -29,6 +29,7 @@ import { MatListModule } from '@angular/material/list';
 import { FanComponent } from './fan/fan.component';
 import { ProductComponent } from './product/product.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     HomeComponent,
     FanComponent,
     ProductComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
