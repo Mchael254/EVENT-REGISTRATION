@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faEdit, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faEdit, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-profile',
@@ -9,6 +9,7 @@ import { faEdit, faUser } from '@fortawesome/free-solid-svg-icons';
 export class ProfileComponent {
   faUser = faUser;
   faEdit = faEdit;
+  faBars = faBars;
   // views
   dashboard = false;
   profile = false;
@@ -20,10 +21,18 @@ export class ProfileComponent {
   support = false;
   activities = true;
 
-  currentView = 'profile';
+  currentView = 'membership';
   setView(view: string):void {
     this.currentView = view;
+    this.isSidenavOpen = false;
   }
+
+  isSidenavOpen = false;
+
+  toggleSidenav() {
+    this.isSidenavOpen = !this.isSidenavOpen;
+  }
+
 
 
   // products

@@ -47,12 +47,7 @@
 .nav{
     display: none;
 }
-fa-icon {
-    font-size: 2rem;
-    color: black;
-    margin-right: 5px;
-    cursor: pointer;
-}
+
 
 
 .side-panel {

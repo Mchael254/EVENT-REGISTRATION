@@ -21,7 +21,37 @@
 
     <!-- View Panel -->
     <div class="view">
-        <h1>Welcome to A-RIDERS Cycling Club!</h1>
+        <div class="headers">
+            <h1>Welcome!</h1>
+            <div class="icons">
+                <div class="nav">
+                    <a (click)="toggleSidenav()"><fa-icon [icon]="faBars"></fa-icon></a>
+                </div>
+            
+                <div class="side-panel" [ngClass]="{'side-panel-open': isSidenavOpen}">
+                    <div class="side-panel-content">
+                        <ul class="nav-links">
+                            <li><a (click)="setView('dashboard')">Home</a></li>
+                            <li><a (click)="setView('profile')">My Profile</a></li>
+                            <li><a (click)="setView('activities')">My Activities</a></li>
+                            <li><a (click)="setView('upcomingEvents')">Upcoming Events</a></li>
+                            <!-- <li><a href="#groups">Groups/Teams</a></li> -->
+                            <li><a (click)="setView('leaderboard')">Leaderboard</a></li>
+                            <!-- <li><a href="#challenges">Challenges</a></li> -->
+                            <li><a (click)="setView('gearLocker')">Gear Locker</a></li>
+                            <li><a (click)="setView('announcements')">Announcements</a></li>
+                            <li><a (click)="setView('membership')">Membership</a></li>
+                            <li><a (click)="setView('support')">Support</a></li>
+                            <li><a href="#settings">Settings</a></li>
+                            <li><a href="#logout">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="close-btn" (click)="toggleSidenav()">X</div>
+                </div>
+            </div>
+            
+        </div>
+     
         <!-- dashboard -->
         <div class="dashboard" *ngIf="currentView === 'dashboard'">
             <div class="cards">

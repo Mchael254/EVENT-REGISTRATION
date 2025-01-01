@@ -11,6 +11,10 @@ body{
     /* background-color: #c8a54b; */
 }
 
+.icons{
+    display: none;
+}
+
 /* Navigation Panel Styling */
 .navigation {
     border: solid grey 2px;
@@ -71,7 +75,7 @@ body{
     padding: 10px;
 }
 .cards{
-    background-color: white;
+    background:linear-gradient(to right, #c9941d, #c8a54b);
     border: solid grey 1px;
     border-radius: 10px;
     height: 280px;
@@ -470,4 +474,177 @@ body{
 
 .activity-actions button:hover {
     background: #ffc107;
+}
+
+/* media queries */
+@media screen and (max-width:480px) {
+    .side-panel {
+        position: fixed;
+        top: 0;
+        right: -250px; 
+        width: 150px;
+        height: auto;
+        background-color:#ffff;
+        color: black;
+        transition: right 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        z-index: 1000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        font-size: small;
+        line-height: 3px;
+    }
+    
+    .side-panel-open {
+        right: 0; 
+    }
+    
+    .side-panel-content a {
+        text-decoration: none;
+        color: black;
+        padding: 15px;
+        display: block;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+    }
+    
+    .side-panel-content a:hover {
+        background:linear-gradient(to right, #c9941d, #c8a54b);
+    }
+    
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        font-size: 30px;
+        color: black;
+        cursor: pointer;
+       
+    }
+    .nav-links a {
+        /* text-decoration: none; */
+        border-radius: 10px;
+        color: black;
+        transition: ease-out 0.5s;
+        border-bottom: solid grey 1px;
+    }
+    
+    #profileContainer{
+        /* border: solid red 2px; */
+        display: flex;
+        justify-content: center;
+    }
+    .icons{
+        display: block;
+        font-size: 2rem;
+        color: black;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    fa-icon {
+        display: block;
+        font-size: 1.5rem;
+        color: black;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    .navigation{
+        display: none;
+    }
+    .view{
+        border: solid green 1px;
+        width: 98vw;
+        display: flex;
+        flex-direction: column;
+    }
+ 
+    .headers{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 5px;
+    }
+    .dashboard{
+        display: flex;
+        flex-direction: column;
+        width: 93%;
+        align-items: center;
+    }
+    .cards{
+        width: 95%;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    /* profile */
+    .profile{
+        width: 93%;
+        height: 80vh;
+    }
+    .profileContainer{
+        width: 90%;
+    }
+    /* event */
+    .upcomingEvents{
+       width: 92%;
+    }
+    .eventCard{
+        height: 450px;
+        margin-bottom: 10px;
+    }
+
+    /*leaderboard */
+    .leaderboard-container {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+        background: black;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    }
+    .leaderboard-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        font-size: x-small;
+    }
+    #select{
+        width: 30%;
+        margin-bottom: 10px;
+    }
+
+    /*gear locker*/
+    .products{
+        height: auto;
+        width: 100%;
+    }
+    .productsContainer{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .productCard{
+        width: 70%;
+        height: 55vh;
+        margin-bottom: 20px;
+    }
+
+    /*membership*/
+    .memberCategories{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+    .membership-tier{
+        width: 70%;
+        height: 50%;
+        text-align: center;
+    }
+    
 }
