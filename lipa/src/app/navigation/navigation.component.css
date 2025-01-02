@@ -115,6 +115,7 @@
     }
     .nav{
         display: block;
+        margin-right: 5px;
     }
 
 }

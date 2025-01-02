@@ -1,7 +1,7 @@
-
-body{
+body {
     margin: 0;
 }
+
 #profileContainer {
     display: flex;
     justify-content: space-around;
@@ -11,7 +11,7 @@ body{
     /* background-color: #c8a54b; */
 }
 
-.icons{
+.icons {
     display: none;
 }
 
@@ -19,7 +19,7 @@ body{
 .navigation {
     border: solid grey 2px;
     width: 250px;
-    background-color:black;
+    background-color: black;
     height: 100vh;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
@@ -29,7 +29,7 @@ body{
 .navigation h2 {
     text-align: center;
     margin-bottom: 20px;
-    color:gold;
+    color: gold;
 }
 
 .nav-links {
@@ -53,7 +53,7 @@ body{
 }
 
 .nav-links a:hover {
-    background:linear-gradient(to right, #c9941d, #c8a54b);
+    background: linear-gradient(to right, #c9941d, #c8a54b);
 }
 
 /* View Panel Styling */
@@ -61,11 +61,19 @@ body{
     /* border: solid blue 2px; */
     height: auto;
     width: 83%;
-   
+
+}
+
+.headerrs img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 /* dashboard */
-.dashboard, .profile, .upcomingEvents{
+.dashboard,
+.profile,
+.upcomingEvents {
     background-color: rgb(250, 241, 241);
     border-radius: 10px;
     height: 90vh;
@@ -74,8 +82,9 @@ body{
     justify-content: space-around;
     padding: 10px;
 }
-.cards{
-    background:linear-gradient(to right, #c9941d, #c8a54b);
+
+.cards {
+    background: linear-gradient(to right, #c9941d, #c8a54b);
     border: solid grey 1px;
     border-radius: 10px;
     height: 280px;
@@ -90,7 +99,7 @@ body{
 }
 
 /* profile */
-.profileContainer{
+.profileContainer {
     border: solid grey 1px;
     height: 60vh;
     padding: 8px;
@@ -99,12 +108,13 @@ body{
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     width: 20vw;
 }
-.profile{
+
+.profile {
     border: solid grey 1px;
     width: 97%;
 }
 
-.profileDetails img{
+.profileDetails img {
     height: 150px;
     width: 150px;
     border-radius: 50%;
@@ -113,8 +123,101 @@ body{
     padding: 5px;
 }
 
+/*edit profile*/
+.editProfile {
+    border: solid grey 1px;
+    border-radius: 10px;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rock Salt', cursive;
+    z-index: 1000;
+}
+
+.signinContainer {
+    position: relative;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    width: 40vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rock Salt', cursive;
+    z-index: 1000;
+}
+
+.line {
+    position: absolute;
+    transform: translateX(0%);
+    background: linear-gradient(90deg, #fff, gold);
+    background-size: 200% 100%;
+    animation: colorChange 5s linear infinite;
+    width: 100%;
+    height: 7px;
+    top: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.formContainer {
+    border: solid #d9d9d9 2px;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    height: 72vh;
+    padding: 5px;
+
+
+}
+
+.formContainer a {
+    color: black;
+}
+
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.signinContainer .formContainer form input {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    outline: none;
+    /* border:  solid gray 0.001px;  */
+    border: solid 1px;
+    border-color: #D9D9D9;
+    height: 30px;
+    font-size: medium;
+    width: 80%;
+
+}
+
+.signinContainer .formContainer form button {
+    padding: 15px 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    border-color: #D9D9D9;
+    background: linear-gradient(gold, rgb(214, 202, 130));
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    transition: all 0.4s ease-in-out;
+    border: solid 1px;
+    border-color: #D9D9D9;
+    cursor: pointer;
+    width: 16vw;
+}
+
 /* event */
-.upcomingEvents{
+.upcomingEvents {
     background-color: rgb(250, 241, 241);
     border: solid grey 1px;
     height: 84vh;
@@ -125,7 +228,8 @@ body{
     padding: 10px;
     margin-left: 10px;
 }
-.eventCard{
+
+.eventCard {
     border: solid grey 1px;
     border-radius: 10px;
     height: 420px;
@@ -139,22 +243,26 @@ body{
     background-color: white;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
-.eventCard img{
+
+.eventCard img {
     background-size: cover;
     height: 200px;
     width: 100%;
     border: solid grey 1px;
     background-color: white;
 }
-.eventsContainer{
+
+.eventsContainer {
     display: flex;
     border: solid grey 1 px;
     justify-content: space-around;
     flex-wrap: wrap;
-    overflow-y:auto ;
+    overflow-y: auto;
 }
-.eventCard button{
-    background:linear-gradient(to right, #c9941d, #c8a54b);;
+
+.eventCard button {
+    background: linear-gradient(to right, #c9941d, #c8a54b);
+    ;
     border: none;
     color: black;
     padding: 10px;
@@ -176,6 +284,7 @@ body{
     cursor: pointer;
     text-align: center;
 }
+
 .leaderboard-container {
     max-width: 1000px;
     margin: 20px auto;
@@ -205,19 +314,20 @@ body{
     text-transform: uppercase;
 }
 
-.leaderboard-table th, .leaderboard-table td {
+.leaderboard-table th,
+.leaderboard-table td {
     padding: 15px;
     border: 1px solid #444;
 }
 
 .leaderboard-table tbody tr:nth-child(odd) {
-    background:black;
+    background: black;
     color: #c9941d;
 
 }
 
 .leaderboard-table tbody tr:nth-child(even) {
-    background:black;
+    background: black;
     color: #c9941d;
 }
 
@@ -287,6 +397,7 @@ body{
     justify-content: space-around;
     background-color: black;
 }
+
 .productCard {
     width: 23%;
     height: 90%;
@@ -329,13 +440,14 @@ body{
 }
 
 /* membership */
-.categories{
+.categories {
     border: solid grey 1px;
     border-radius: 10px;
     height: 20vh;
     padding-left: 5px;
 }
-.memberCategories{
+
+.memberCategories {
     border: solid #fff 1px;
     border-radius: 5px;
     display: flex;
@@ -359,7 +471,8 @@ body{
     justify-content: space-between;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-.memberButton{
+
+.memberButton {
     padding: 0.75rem 1.5rem;
     background-color: #000;
     color: white;
@@ -481,26 +594,29 @@ body{
     .side-panel {
         position: fixed;
         top: 0;
-        right: -250px; 
+        left: -250px;
+        /* Change from right to left */
         width: 150px;
-        height: auto;
-        background-color:#ffff;
+        height: 100vh;
+        /* Ensure it spans the full height */
+        background-color: #fff;
         color: black;
-        transition: right 0.3s ease;
+        transition: left 0.3s ease;
+        /* Update to apply transition on 'left' */
         display: flex;
         flex-direction: column;
         padding-top: 50px;
-        z-index: 1000;
+        z-index: 1100;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         overflow-y: auto;
         font-size: small;
         line-height: 3px;
     }
-    
+
     .side-panel-open {
-        right: 0; 
+        left: 0;
     }
-    
+
     .side-panel-content a {
         text-decoration: none;
         color: black;
@@ -509,11 +625,11 @@ body{
         transition: background-color 0.3s;
         margin-top: 20px;
     }
-    
+
     .side-panel-content a:hover {
-        background:linear-gradient(to right, #c9941d, #c8a54b);
+        background: linear-gradient(to right, #c9941d, #c8a54b);
     }
-    
+
     .close-btn {
         position: absolute;
         top: 20px;
@@ -521,8 +637,9 @@ body{
         font-size: 30px;
         color: black;
         cursor: pointer;
-       
+
     }
+
     .nav-links a {
         /* text-decoration: none; */
         border-radius: 10px;
@@ -530,19 +647,21 @@ body{
         transition: ease-out 0.5s;
         border-bottom: solid grey 1px;
     }
-    
-    #profileContainer{
+
+    #profileContainer {
         /* border: solid red 2px; */
         display: flex;
         justify-content: center;
     }
-    .icons{
+
+    .icons {
         display: block;
         font-size: 2rem;
         color: black;
         margin-right: 5px;
         cursor: pointer;
     }
+
     fa-icon {
         display: block;
         font-size: 1.5rem;
@@ -550,47 +669,62 @@ body{
         margin-right: 5px;
         cursor: pointer;
     }
-    .navigation{
+
+    .navigation {
         display: none;
     }
-    .view{
-        border: solid green 1px;
+
+    .view {
         width: 98vw;
         display: flex;
         flex-direction: column;
     }
- 
-    .headers{
+
+    .headers {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-left: 5px;
+        padding: 5px;
     }
-    .dashboard{
+
+    .dashboard {
         display: flex;
         flex-direction: column;
         width: 93%;
         align-items: center;
     }
-    .cards{
+
+    .cards {
         width: 95%;
         height: 200px;
         margin-bottom: 10px;
     }
 
     /* profile */
-    .profile{
+    .profile {
         width: 93%;
         height: 80vh;
     }
-    .profileContainer{
+
+    .profileContainer {
         width: 90%;
     }
-    /* event */
-    .upcomingEvents{
-       width: 92%;
+
+    /*edit profile*/
+    .signinContainer {
+        width: 100%;
     }
-    .eventCard{
+
+    .signinContainer .formContainer form button {
+        width: 50vw;
+    }
+
+    /* event */
+    .upcomingEvents {
+        width: 92%;
+    }
+
+    .eventCard {
         height: 450px;
         margin-bottom: 10px;
     }
@@ -604,47 +738,52 @@ body{
         border-radius: 12px;
         box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
     }
+
     .leaderboard-table {
         width: 100%;
         border-collapse: collapse;
         text-align: center;
         font-size: x-small;
     }
-    #select{
+
+    #select {
         width: 30%;
         margin-bottom: 10px;
     }
 
     /*gear locker*/
-    .products{
+    .products {
         height: auto;
         width: 100%;
     }
-    .productsContainer{
+
+    .productsContainer {
         display: flex;
         flex-direction: column;
         height: auto;
         padding-top: 5px;
         padding-bottom: 5px;
     }
-    .productCard{
+
+    .productCard {
         width: 70%;
         height: 55vh;
         margin-bottom: 20px;
     }
 
     /*membership*/
-    .memberCategories{
+    .memberCategories {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         height: auto;
     }
-    .membership-tier{
+
+    .membership-tier {
         width: 70%;
         height: 50%;
         text-align: center;
     }
-    
+
 }

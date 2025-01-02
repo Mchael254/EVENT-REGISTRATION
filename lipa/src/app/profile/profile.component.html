@@ -14,7 +14,7 @@
             <li><a (click)="setView('announcements')">Announcements</a></li>
             <li><a (click)="setView('membership')">Membership</a></li>
             <li><a (click)="setView('support')">Support</a></li>
-            <li><a href="#settings">Settings</a></li>
+            <!-- <li><a href="#settings">Settings</a></li> -->
             <li><a href="#logout">Logout</a></li>
         </ul>
     </div>
@@ -22,12 +22,12 @@
     <!-- View Panel -->
     <div class="view">
         <div class="headers">
-            <h1>Welcome!</h1>
+           
             <div class="icons">
                 <div class="nav">
                     <a (click)="toggleSidenav()"><fa-icon [icon]="faBars"></fa-icon></a>
                 </div>
-            
+
                 <div class="side-panel" [ngClass]="{'side-panel-open': isSidenavOpen}">
                     <div class="side-panel-content">
                         <ul class="nav-links">
@@ -42,16 +42,17 @@
                             <li><a (click)="setView('announcements')">Announcements</a></li>
                             <li><a (click)="setView('membership')">Membership</a></li>
                             <li><a (click)="setView('support')">Support</a></li>
-                            <li><a href="#settings">Settings</a></li>
+                            <!-- <li><a href="#settings">Settings</a></li> -->
                             <li><a href="#logout">Logout</a></li>
                         </ul>
                     </div>
                     <div class="close-btn" (click)="toggleSidenav()">X</div>
                 </div>
             </div>
-            
+            <span class="headerrs"><img src="../../assets/Jonas.png" alt="profile" class="profile-image">Name</span>
+
         </div>
-     
+
         <!-- dashboard -->
         <div class="dashboard" *ngIf="currentView === 'dashboard'">
             <div class="cards">
@@ -78,7 +79,35 @@
                     <p><strong>Phone</strong>: 0703142445</p>
                     <p><strong>Address</strong>: Mombasa</p>
                     <p><strong>Category</strong>: MTB, Road</p>
-                    <a routerLink="/signin"><fa-icon [icon]="faEdit"></fa-icon></a>
+                    <a (click)="setView('editProfile')"><fa-icon [icon]="faEdit"></fa-icon></a>
+                </div>
+
+            </div>
+        </div>
+
+        <!--edit profile-->
+        <div class="editProfile" *ngIf="currentView === 'editProfile'">
+            <div class="signinContainer">
+                <p *ngIf="line" class="line"></p>
+                <h3>Edit Profile</h3>
+                <div class="formContainer">
+                    <form id="signup-form" (ngSubmit)="onSubmit()">
+                        <p id="response">{{ loginError }}</p>
+                        <input type="text" placeholder="First Name" [(ngModel)]="firstName" name="firstName"
+                            data-cy="firstName">
+                        <input type="text" placeholder="Second Name" [(ngModel)]="lastName" name="lastName"
+                            data-cy="lastName">
+                        <input type="text" placeholder="username" [(ngModel)]="userName" name="userName"
+                            data-cy="userName">
+                        <input type="email" placeholder="email" [(ngModel)]="userEmail" name="userEmail"
+                            data-cy="userName">
+                        <input type="password" placeholder="password" [(ngModel)]="password" name="password"
+                            data-cy="password">
+                        <input type="password" placeholder="Confirm password" [(ngModel)]="confirmPassword"
+                            name="confirmPassword" data-cy="password">
+                        <button  class="editButton"  type="submit" data-cy="signin-btn" value="Submit">Edit Profile</button>
+                        <a routerLink="/passwordReset" data-cy="forgotPassword">Forgot password?</a>
+                    </form>
                 </div>
 
             </div>

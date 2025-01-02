@@ -21,7 +21,7 @@ export class ProfileComponent {
   support = false;
   activities = true;
 
-  currentView = 'membership';
+  currentView = 'editProfile';
   setView(view: string):void {
     this.currentView = view;
     this.isSidenavOpen = false;
@@ -31,6 +31,22 @@ export class ProfileComponent {
 
   toggleSidenav() {
     this.isSidenavOpen = !this.isSidenavOpen;
+  }
+
+  //form
+  line:boolean = false;
+  loginError:string = '';
+  userEmail:string = '';
+  password:string = ''
+  confirmPassword:string = '';
+  firstName:string = '';
+  lastName:string = '';
+  userName:string = '';
+  phone:string = '';
+  address:string = '';
+
+  onSubmit(){
+
   }
 
 
